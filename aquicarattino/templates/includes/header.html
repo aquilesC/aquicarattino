@@ -1,0 +1,81 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+
+<header class="header">
+    <div class="top-bar theme-bg-primary-darken">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark position-relative">
+                <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-twitter fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-github-alt fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item"><a class="text-white" href="#"><i
+                            class="fab fa-stack-overflow fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-codepen fa-fw"></i></a>
+                    </li>
+                </ul><!--//social-list-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse text-uppercase" id="navigation">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active mr-lg-3">
+                            <a class="nav-link" href="index.html">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item mr-lg-3">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item mr-lg-3">
+                            <a class="nav-link" href="talks.html">Talks</a>
+                        </li>
+                        <li class="nav-item mr-lg-3">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item mr-lg-3">
+                            <a class="nav-link" href="resume.html">Resume</a>
+                        </li>
+                        <li class="nav-item mr-lg-3">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown mr-0">
+                            <a class="nav-link dropdown-toggle" href="#" id="navigationLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                Pages
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right text-capitalize shadow-lg"
+                                 aria-labelledby="navigationLink">
+                                <a class="dropdown-item" href="project.html">Project Case Study (1 Column)</a>
+                                <a class="dropdown-item" href="project-alt.html">Project Case Study (2 Columns)</a>
+                                <a class="dropdown-item" href="blog-post.html">Blog Post</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <span id="slide-line"></span>
+                </div>
+
+
+            </nav>
+
+        </div><!--//container-->
+
+    </div><!--//top-bar-->
+
+    <div class="header-intro theme-bg-primary text-white py-5">
+        <div class="container">
+            <div class="profile-teaser media flex-column flex-md-row">
+                {% image page.image fill-240x240 class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" %}
+
+                <div class="media-body text-center text-md-left">
+                    {{ page.intro|richtext }}
+                </div><!--//media-body-->
+            </div><!--//profile-teaser-->
+
+        </div><!--//container-->
+    </div><!--//header-intro-->
+
+</header><!--//header-->
