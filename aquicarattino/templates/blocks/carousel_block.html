@@ -1,5 +1,6 @@
 {% load wagtailimages_tags wagtailcore_tags %}
 
+
 <div id="project-carousel" class="theme-carousel carousel slide mb-5" data-ride="carousel">
   <ol class="carousel-indicators">
       {% for img in self.image_items %}
@@ -11,7 +12,7 @@
   <div class="carousel-inner">
       {% for img in self.image_items %}
         <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
-          {% image img width-850 class="d-block w-100" %}
+            {% image img width-850 class="d-block w-100" %}
         </div>
       {% endfor %}
   </div>

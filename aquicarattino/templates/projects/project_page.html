@@ -1,19 +1,23 @@
 {% extends 'base.html' %}
+{% load wagtailimages_tags wagtailcore_tags %}
 
 {% block header_extra %}
   <div class="header-intro theme-bg-primary text-white py-5">
     <div class="container position-relative">
       <h2 class="page-heading mb-2">{{ page.title }}</h2>
       <div class="page-heading-tagline">{{ page.summary }}.</div>
-        {#      <div class="page-heading-logo font-weight-bold position-absolute mt-4 mt-md-0"><img class="client-logo"#}
-        {#                                                                                          src="assets/images/logos/logo-2-inverse.svg">#}
-        {#      </div>#}
     </div><!--//container-->
   </div><!--//header-intro-->
 {% endblock %}
 {% block content %}
- <section class="project-wrapper single-col-max-width py-5 px-4 mx-auto">
- {{ page.body }}
- </section>
-
+  <section class="project-wrapper single-col-max-width py-5 px-4 mx-auto">
+      {% if page.image %}
+        <div class="section-row">
+          <div class="mb-5">
+            {% image page.image width-850 %}
+          </div>
+        </div>
+      {% endif %}
+      {{ page.body }}
+  </section>
 {% endblock %}

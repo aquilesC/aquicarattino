@@ -8,13 +8,12 @@
       <footer class="blockquote-footer presudo-hidden">
         <div class="media client-profile flex-column flex-md-row">
             {% if self.image %}
-              <img class="mr-md-3" src="{% image self.image fill-80x80 %}" alt="">
+                {% image self.image fill-80x80 class="mr-md-3" %}
             {% endif %}
           <cite title="Source" class="quote-source d-inline-block font-style-normal pt-3">
             <span class="d-block">{{ self.author }}</span>
             <span class="d-block">{% if self.author_title %}{{ self.author_title }}{% endif %}</span>
-            <span class="d-block position-absolute source-link"><i class="fab fa-link fa-2x mr-1"
-                                                                   data-fa-transform="down-3"></i> <a
+            <span class="d-block position-absolute source-link"><a
                     class="text-secondary" href="{% firstof self.link '\#' %}" target="_blank">Visit Website <i
                     class="fas fa-external-link-alt ml-1" data-fa-transform="up-1"></i></a></span>
           </cite>
