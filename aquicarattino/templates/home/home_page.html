@@ -1,1 +1,15 @@
 {% extends 'base.html' %}
+{% block header_extra %}
+  <div class="header-intro theme-bg-primary text-white py-5">
+    <div class="container">
+      <div class="profile-teaser media flex-column flex-md-row">
+          {% image page.image fill-240x240 class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" %}
+
+        <div class="media-body text-center text-md-left">
+            {{ page.intro|richtext }}
+        </div><!--//media-body-->
+      </div><!--//profile-teaser-->
+
+    </div><!--//container-->
+  </div><!--//header-intro-->
+{% endblock %}

@@ -1,0 +1,25 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+
+<div class="testimonial bg-white my-5">
+  <div class="position-relative p-5 shadow-sm">
+    <blockquote class="blockquote pl-4">
+      <p class="mb-4">{{ self.text }}</p>
+      <i class="quote-icon fas fa-quote-left fa-lg position-absolute text-primary"></i>
+      <footer class="blockquote-footer presudo-hidden">
+        <div class="media client-profile flex-column flex-md-row">
+            {% if self.image %}
+              <img class="mr-md-3" src="{% image self.image fill-80x80 %}" alt="">
+            {% endif %}
+          <cite title="Source" class="quote-source d-inline-block font-style-normal pt-3">
+            <span class="d-block">{{ self.author }}</span>
+            <span class="d-block">{% if self.author_title %}{{ self.author_title }}{% endif %}</span>
+            <span class="d-block position-absolute source-link"><i class="fab fa-link fa-2x mr-1"
+                                                                   data-fa-transform="down-3"></i> <a
+                    class="text-secondary" href="{% firstof self.link '\#' %}" target="_blank">Visit Website <i
+                    class="fas fa-external-link-alt ml-1" data-fa-transform="up-1"></i></a></span>
+          </cite>
+        </div><!--//media-->
+      </footer>
+    </blockquote>
+  </div>
+</div><!--//testimonial-->
