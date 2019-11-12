@@ -64,21 +64,5 @@ class ContentBlock(StreamBlock):
         template = 'blocks/content_block.html'
 
 
-class SocialLink(StructBlock):
-    social_network = URLBlock(required=True, label='Profile to link to')
-    fa_icon = CharBlock(required=True, label='Font Awesome Icon to use, for example fa-linkedin-in')
-
-    class Meta:
-        icon = 'fa-linkedin'
-        template = 'blocks/social_link_block.html'
-
-
-class SocialProfileBlock(StreamBlock):
-    social_link = SocialLink()
-
-    class Meta:
-        icon = 'fa-linkedin-in'
-        template = 'blocks/social_profile_block.html'
-
 class ProjectStreamBlock(StreamBlock):
     content = ContentBlock()

@@ -13,6 +13,7 @@
     </div><!--//container-->
   </div><!--//header-intro-->
 {% endblock %}
+
 {% block content %}
   <article class="resume-wrapper text-center position-relative">
     <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
@@ -21,14 +22,38 @@
             {% if page.profile_image %}
                 {% image page.profile_image fill-220x220 class="mr-3 img-fluid picture mx-auto" %}
             {% endif %}
-          <div class="primary-info">
-              {{ page.header_text|richtext }}
-          </div>
-          <div class="secondary-info ml-md-auto mt-2">
-              {{ page.social_profiles }}
+          <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+            <div class="primary-info">
+              <div class="primary-info">
+                <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">{{ page.name }}</h1>
+                <div class="title mb-3">{{ page.subtitle }}</div>
+                <ul class="list-unstyled">
+                    {% if page.email %}
+                      <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2"
+                                                      data-fa-transform="grow-3"></i>{{ page.email }}</a>
+                      </li>
+                    {% endif %}
+                    {% if page.phone %}
+                      <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2"
+                                         data-fa-transform="grow-6"></i>{{ page.phone }}</a></li>
+                    {% endif %}
+                </ul>
+              </div><!--//primary-info-->
+            </div>
+            <div class="secondary-info ml-md-auto mt-2">
+                {{ page.social_profiles }}
+            </div>
           </div>
         </div>
       </header>
+      <div class="resume-body p-5">
+        <section class="resume-section summary-section mb-5">
+          <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Career Summary</h2>
+          <div class="resume-section-content">
+            <p class="mb-0">{{ page.career_summary|richtext }}</p>
+          </div>
+        </section><!--//summary-section-->
+      </div>
     </div>
   </article>
 {% endblock %}
