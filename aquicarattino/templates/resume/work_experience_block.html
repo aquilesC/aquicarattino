@@ -1,0 +1,20 @@
+{% load wagtailcore_tags %}
+<article class="resume-timeline-item position-relative pb-5">
+  <div class="resume-timeline-item-header mb-2">
+    <div class="d-flex flex-column flex-md-row">
+      <h3 class="resume-position-title font-weight-bold mb-1">{{ self.title }}</h3>
+      <div class="resume-company-name ml-auto">{{ self.where }}</div>
+    </div><!--//row-->
+    <div class="resume-position-time">{{ self.start_date|date:"F Y" }} - {% firstof self.end_date|date:"F Y" 'Present' %}</div>
+  </div><!--//resume-timeline-item-header-->
+  <div class="resume-timeline-item-desc">
+      {{ self.description|richtext }}
+    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+    <ul class="list-inline">
+        {% for tag in self.tags %}
+          <li class="list-inline-item"><span class="badge badge-secondary badge-pill">{{ tag }}</span></li>
+        {% endfor %}
+    </ul>
+  </div><!--//resume-timeline-item-desc-->
+
+</article><!--//resume-timeline-item-->

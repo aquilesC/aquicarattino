@@ -1,9 +1,10 @@
 from django.db import models
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, MultiFieldPanel
+from wagtail.core.blocks import CharBlock
 from wagtail.core.fields import RichTextField, StreamField
 from wagtail.core.models import Page
 
-from .blocks import SocialProfileBlock
+from .blocks import SocialProfileBlock, WorkExperienceBlock, WorkBlock, SkillsetBlock, OtherSkillBlock, EducationBlock
 from wagtail.documents.edit_handlers import DocumentChooserPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
@@ -16,6 +17,36 @@ class ResumePage(Page):
 
     career_summary = models.TextField()
 
+    work_experience = StreamField(
+        WorkBlock(),
+        help_text='Work Experience',
+        null=True,
+        blank=True
+    )
+
+    skills_tools = StreamField([
+        ('skills_tools', SkillsetBlock()),
+    ],
+        help_text='Skills and Tools',
+        null=True,
+        blank=True,
+    )
+
+    other_skills = StreamField([
+        ('other_skills', OtherSkillBlock()),
+    ],
+        help_text='Other Skills',
+        null=True,
+        blank=True,
+    )
+
+    education = StreamField([
+        ('education', EducationBlock()),
+    ],
+        help_text='Education',
+        null=True,
+        blank=True
+    )
 
     pdf_link = models.ForeignKey(
         'wagtaildocs.Document',
@@ -54,6 +85,10 @@ class ResumePage(Page):
             classname='collapsible',
         ),
         FieldPanel('career_summary'),
+        StreamFieldPanel('work_experience'),
+        StreamFieldPanel('skills_tools'),
+        StreamFieldPanel('other_skills'),
+        StreamFieldPanel('education'),
         DocumentChooserPanel('pdf_link'),
         ImageChooserPanel('profile_image'),
         StreamFieldPanel('social_profiles')

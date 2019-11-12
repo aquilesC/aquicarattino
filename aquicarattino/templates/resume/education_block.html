@@ -1,0 +1,5 @@
+<li class="mb-2">
+  <div class="resume-degree font-weight-bold">{{ self.title }}</div>
+  <div class="resume-degree-org">{{ self.where }}</div>
+  <div class="resume-degree-time">{{ self.start_date|date:"F Y" }} - {% firstof self.end_date|date:"F Y" "Present" %}</div>
+</li>

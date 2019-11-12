@@ -53,7 +53,98 @@
             <p class="mb-0">{{ page.career_summary|richtext }}</p>
           </div>
         </section><!--//summary-section-->
-      </div>
+        <div class="row">
+          <div class="col-lg-9">
+            <section class="resume-section experience-section mb-5">
+              <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
+              <div class="resume-section-content">
+                <div class="resume-timeline position-relative">
+                    {% for block in page.work_experience %}
+                        {{ block }}
+                    {% endfor %}
+                </div><!--//resume-timeline-->
+
+
+              </div>
+            </section><!--//experience-section-->
+          </div>
+          <div class="col-lg-3">
+            <section class="resume-section skills-section mb-5">
+              <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
+              <div class="resume-section-content">
+                  {% for skill in page.skills_tools %}
+                      {{ skill }}
+                  {% endfor %}
+                  {% if page.other_skills %}
+                    <div class="resume-skill-item">
+                      <h4 class="resume-skills-cat font-weight-bold">Others</h4>
+                        {% for skill in page.other_skills %}
+                            {{ skill }}
+                        {% endfor %}
+                      <ul class="list-inline">
+                      </ul>
+                    </div><!--//resume-skill-item-->
+                  {% endif %}
+              </div><!--resume-section-content-->
+            </section><!--//skills-section-->
+            <section class="resume-section education-section mb-5">
+              <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+              <div class="resume-section-content">
+                <ul class="list-unstyled">
+                    {% if page.education %}
+                        {% for education in page.education %}
+                            {{ education }}
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+              </div>
+            </section><!--//education-section-->
+            <section class="resume-section reference-section mb-5">
+              <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Awards</h2>
+              <div class="resume-section-content">
+                <ul class="list-unstyled resume-awards-list">
+                  <li class="mb-2 pl-4 position-relative">
+                    <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
+                    <div class="resume-award-name">Award Name Lorem</div>
+                    <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque eu, pretium quis,
+                      sem. Nulla consequat massa quis enim. Donec pede justo.
+                    </div>
+                  </li>
+                  <li class="mb-0 pl-4 position-relative">
+                    <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
+                    <div class="resume-award-name">Award Name Ipsum</div>
+                    <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque.</div>
+                  </li>
+                </ul>
+              </div>
+            </section><!--//interests-section-->
+            <section class="resume-section language-section mb-5">
+              <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
+              <div class="resume-section-content">
+                <ul class="list-unstyled resume-lang-list">
+                  <li class="mb-2"><span class="resume-lang-name font-weight-bold">English</span> <small
+                          class="text-muted font-weight-normal">(Native)</small></li>
+                  <li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">French</span> <small
+                          class="text-muted font-weight-normal">(Professional)</small></li>
+                  <li><span class="resume-lang-name font-weight-bold">Spanish</span> <small
+                          class="text-muted font-weight-normal">(Professional)</small></li>
+                </ul>
+              </div>
+            </section><!--//language-section-->
+            <section class="resume-section interests-section mb-5">
+              <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
+              <div class="resume-section-content">
+                <ul class="list-unstyled">
+                  <li class="mb-1">Climbing</li>
+                  <li class="mb-1">Snowboarding</li>
+                  <li class="mb-1">Cooking</li>
+                </ul>
+              </div>
+            </section><!--//interests-section-->
+
+          </div>
+        </div><!--//row-->
+      </div><!--//resume-body-->
     </div>
   </article>
 {% endblock %}
