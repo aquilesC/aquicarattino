@@ -99,38 +99,12 @@
                 </ul>
               </div>
             </section><!--//education-section-->
-            <section class="resume-section reference-section mb-5">
-              <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Awards</h2>
-              <div class="resume-section-content">
-                <ul class="list-unstyled resume-awards-list">
-                  <li class="mb-2 pl-4 position-relative">
-                    <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-                    <div class="resume-award-name">Award Name Lorem</div>
-                    <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque eu, pretium quis,
-                      sem. Nulla consequat massa quis enim. Donec pede justo.
-                    </div>
-                  </li>
-                  <li class="mb-0 pl-4 position-relative">
-                    <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-                    <div class="resume-award-name">Award Name Ipsum</div>
-                    <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque.</div>
-                  </li>
-                </ul>
-              </div>
-            </section><!--//interests-section-->
-            <section class="resume-section language-section mb-5">
-              <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
-              <div class="resume-section-content">
-                <ul class="list-unstyled resume-lang-list">
-                  <li class="mb-2"><span class="resume-lang-name font-weight-bold">English</span> <small
-                          class="text-muted font-weight-normal">(Native)</small></li>
-                  <li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">French</span> <small
-                          class="text-muted font-weight-normal">(Professional)</small></li>
-                  <li><span class="resume-lang-name font-weight-bold">Spanish</span> <small
-                          class="text-muted font-weight-normal">(Professional)</small></li>
-                </ul>
-              </div>
-            </section><!--//language-section-->
+              {% if page.miscelaneous %}
+                  {{ page.miscelaneous }}
+              {% endif %}
+              {% if page.languages %}
+                  {{ page.languages }}
+              {% endif %}
             <section class="resume-section interests-section mb-5">
               <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
               <div class="resume-section-content">

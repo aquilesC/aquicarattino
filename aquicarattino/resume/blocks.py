@@ -63,3 +63,33 @@ class EducationBlock(blocks.StructBlock):
 
     class Meta:
         template = 'resume/education_block.html'
+
+
+class MiscellaneousBlock(blocks.StructBlock):
+    title = blocks.CharBlock(max_length=50, required=True)
+    description = blocks.TextBlock(required=True)
+
+    class Meta:
+        template = 'resume/miscellaneous_block.html'
+
+
+class MiscellaneousStreamBlock(blocks.StreamBlock):
+    content = MiscellaneousBlock()
+
+    class Meta:
+        template = 'resume/miscellaneous_stream_block.html'
+
+
+class LanguageBlock(blocks.StructBlock):
+    language = blocks.CharBlock(max_length=50, required=True)
+    proficiency = blocks.CharBlock(max_length=50, required=True)
+
+    class Meta:
+        template = 'resume/language_block.html'
+
+
+class LanguageStreamBlock(blocks.StreamBlock):
+    language = LanguageBlock()
+
+    class Meta:
+        template = 'resume/language_stream_block.html'
