@@ -5,7 +5,7 @@ from wagtail.core.fields import RichTextField, StreamField
 from wagtail.core.models import Page
 
 from .blocks import SocialProfileBlock, WorkExperienceBlock, WorkBlock, SkillsetBlock, OtherSkillBlock, EducationBlock, \
-    MiscellaneousStreamBlock, LanguageStreamBlock
+    MiscellaneousStreamBlock, LanguageStreamBlock, InterestsStreamBlock, EducationStreamBlock
 from wagtail.documents.edit_handlers import DocumentChooserPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
@@ -41,9 +41,7 @@ class ResumePage(Page):
         blank=True,
     )
 
-    education = StreamField([
-        ('education', EducationBlock()),
-    ],
+    education = StreamField(EducationStreamBlock(),
         help_text='Education',
         null=True,
         blank=True
@@ -52,6 +50,8 @@ class ResumePage(Page):
     miscellaneous = StreamField(MiscellaneousStreamBlock(), blank=True, null=True)
 
     languages = StreamField(LanguageStreamBlock(), blank=True, null=True)
+
+    interests = StreamField(InterestsStreamBlock(), blank=True, null=True)
 
     pdf_link = models.ForeignKey(
         'wagtaildocs.Document',
@@ -96,6 +96,7 @@ class ResumePage(Page):
         StreamFieldPanel('education'),
         StreamFieldPanel('miscellaneous'),
         StreamFieldPanel('languages'),
+        StreamFieldPanel('interests'),
         DocumentChooserPanel('pdf_link'),
         ImageChooserPanel('profile_image'),
         StreamFieldPanel('social_profiles')

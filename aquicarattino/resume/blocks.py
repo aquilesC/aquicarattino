@@ -65,6 +65,13 @@ class EducationBlock(blocks.StructBlock):
         template = 'resume/education_block.html'
 
 
+class EducationStreamBlock(blocks.StreamBlock):
+    education = EducationBlock()
+
+    class Meta:
+        template = 'resume/education_stream_block.html'
+
+
 class MiscellaneousBlock(blocks.StructBlock):
     title = blocks.CharBlock(max_length=50, required=True)
     description = blocks.TextBlock(required=True)
@@ -93,3 +100,17 @@ class LanguageStreamBlock(blocks.StreamBlock):
 
     class Meta:
         template = 'resume/language_stream_block.html'
+
+
+class InterestBlock(blocks.StructBlock):
+    name = blocks.CharBlock(max_length=20, required=True)
+
+    class Meta:
+        template = 'resume/interest_block.html'
+
+
+class InterestsStreamBlock(blocks.StreamBlock):
+    interest = InterestBlock()
+
+    class Meta:
+        template = 'resume/interests_stream_block.html'

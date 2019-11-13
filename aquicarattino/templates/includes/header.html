@@ -5,16 +5,90 @@
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark position-relative">
       <ul class="social-list list-inline mb-0">
-        <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-twitter fa-fw"></i></a>
-        </li>
-        <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
-        </li>
-        <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-github-alt fa-fw"></i></a>
-        </li>
-        <li class="list-inline-item"><a class="text-white" href="#"><i
-                class="fab fa-stack-overflow fa-fw"></i></a></li>
-        <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-codepen fa-fw"></i></a>
-        </li>
+          {% if settings.base.SocialMediaSettings.twitter %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.twitter }}">
+                <i class="fab fa-twitter fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.linkedin %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.linkedin }}">
+                <i class="fab fa-linkedin-in fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.github %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.github }}">
+                <i class="fab fa-github-alt fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.stackoverflow %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.stackoverflow }}">
+                <i class="fab fa-stack-overflow fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.codepend %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.codepen }}">
+                <i class="fab fa-codepen fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.indiehackers %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.indiehackers }}">
+                <i class="fas fa-hat-cowboy fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.facebook %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.facebook }}">
+                <i class="fab fa-facebook-f fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.instagram %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.instagram }}">
+                <i class="fab fa-instagram fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.trip_advisor %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.trip_advisor }}">
+                <i class="fab fa-tripadvisor fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.youtube %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.youtube }}">
+                <i class="fab fa-youtube fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.vimeo %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.vimeo }}">
+                <i class="fab fa-vimeo-v fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if settings.base.SocialMediaSettings.orcid %}
+            <li class="list-inline-item">
+              <a class="text-white" href="{{ settings.base.SocialMediaSettings.orcid }}">
+                <i class="fab fa-orcid fa-fw"></i>
+              </a>
+            </li>
+          {% endif %}
       </ul><!--//social-list-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
               aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,14 +97,11 @@
 
       <div class="collapse navbar-collapse text-uppercase" id="navigation">
         <ul class="navbar-nav ml-lg-auto">
-          <li class="nav-item active mr-lg-3">
-            <a class="nav-link" href="index.html">About <span class="sr-only">(current)</span></a>
+          <li class="nav-item mr-lg-3">
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item mr-lg-3">
             <a class="nav-link" href="projects.html">Projects</a>
-          </li>
-          <li class="nav-item mr-lg-3">
-            <a class="nav-link" href="talks.html">Talks</a>
           </li>
           <li class="nav-item mr-lg-3">
             <a class="nav-link" href="blog.html">Blog</a>
