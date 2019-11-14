@@ -1,9 +1,11 @@
+from django.contrib import messages
 from django.db import models
+from django.shortcuts import redirect, render
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from modelcluster.fields import ParentalKey
-from taggit.models import TaggedItemBase
+from taggit.models import TaggedItemBase, Tag
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, RichTextFieldPanel
-from wagtail.contrib.routable_page.models import RoutablePageMixin
+from wagtail.contrib.routable_page.models import RoutablePageMixin, route
 from wagtail.core.fields import StreamField, RichTextField
 from wagtail.core.models import Page
 
@@ -26,6 +28,14 @@ class ProjectPage(Page):
         on_delete=models.SET_NULL,
         related_name='+',
         help_text='Image for cards and header image for page'
+    )
+    logo = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+',
+        help_text='Overlay logo for the list of projects'
     )
     body = StreamField(
         ProjectStreamBlock(), verbose_name="Page body", blank=True
@@ -54,8 +64,9 @@ class ProjectPage(Page):
             ])
         return tags
 
+
 class ProjectIndexPage(RoutablePageMixin, Page):
-    subtitle = models.CharField(blank=False, null=False)
+    subtitle = models.CharField(max_length=250, blank=False, null=False)
     footer = RichTextField(help_text='Content to appear at the end of the page', null=True, blank=True)
 
     content_panels = Page.content_panels + [
@@ -70,14 +81,14 @@ class ProjectIndexPage(RoutablePageMixin, Page):
 
     def get_context(self, request, *args, **kwargs):
         context = super(ProjectIndexPage, self).get_context(request)
-        context['projects'] = ProjectPage.objects.descendat_of(self).live()
+        context['projects'] = ProjectPage.objects.descendant_of(self).live()
         return context
 
     def serve_preview(self, request, mode_name):
         return self.serve(request)
 
     def get_projects(self, tag=None):
-        projects = ProjectPage.objects.descendat_of(self)
+        projects = ProjectPage.objects.descendant_of(self)
         if tag:
             projects = projects.filter(tag=tag)
         return projects
@@ -88,3 +99,22 @@ class ProjectIndexPage(RoutablePageMixin, Page):
             tags += project.get_tags
         tags = sorted(set(tags))
         return tags
+
+    @route(r'^tags/$', name='tag_archive')
+    @route(r'^tags/([\w-]+)/$', name='tag_archive')
+    def tag_archive(self, request, tag=None):
+        try:
+            tag = Tag.objects.get(slug=tag)
+        except Tag.DoesNotExist:
+            if tag:
+                msg = f'There are no blog posts tagged with {tag}'
+                messages.add(msg)
+            return redirect(self.url)
+
+        projects = self.get_projects(tag=tag)
+        context = {
+            'tag': tag,
+            'projects': projects
+        }
+
+        return render(request, 'projects/project_index_page.html', context=context)
