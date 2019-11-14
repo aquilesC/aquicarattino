@@ -50,6 +50,15 @@ class AlertBlock(StructBlock):
         template = "blocks/alert_block.html"
 
 
+class CodeBlock(StructBlock):
+    language = CharBlock(required=True, max_length=20, help_text='In which language this is written')
+    code = TextBlock(required=True, help_text='The actual code')
+
+    class Meta:
+        icon = 'fa-code'
+        template = 'blocks/code_block.html'
+
+
 class ContentBlock(StreamBlock):
     text = RichTextBlock(
         icon='fa fa-paragraph',
@@ -59,6 +68,7 @@ class ContentBlock(StreamBlock):
     button_block = ButtonBlock(required=False)
     carousel_block = CarouselBlock()
     testimonial = TestimonialBlock()
+    code_block = CodeBlock()
     class Meta:
         icon = 'fa fa-scroll'
         template = 'blocks/content_block.html'

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load wagtailimages_tags wagtailcore_tags %}
+{% load static wagtailimages_tags wagtailcore_tags %}
 
 {% block header_extra %}
   <div class="header-intro theme-bg-primary text-white py-5">
@@ -14,10 +14,19 @@
       {% if page.image %}
         <div class="section-row">
           <div class="mb-5">
-            {% image page.image width-850 %}
+              {% image page.image width-850 %}
           </div>
         </div>
       {% endif %}
       {{ page.body }}
   </section>
+{% endblock %}
+
+{% block page_specific_js %}
+  <script type="text/javascript" src="{% static 'theme/plugins/highlight/highlight.pack.js' %} "></script>
+{% endblock %}
+
+{% block custom_page_js %}
+  <script type="text/javascript" src="{% static 'theme/js/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'theme/js/code-highlight.js' %}"></script>
 {% endblock %}
