@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static wagtailimages_tags wagtailcore_tags %}
 
+{% block extra_head_css %}
+  <link rel="stylesheet" href="assets/plugins/lightbox/ekko-lightbox.css">
+{% endblock %}
+
 {% block header_extra %}
   <div class="header-intro theme-bg-primary text-white py-5">
     <div class="container position-relative">
@@ -9,6 +13,7 @@
     </div><!--//container-->
   </div><!--//header-intro-->
 {% endblock %}
+
 {% block content %}
   <section class="project-wrapper single-col-max-width py-5 px-4 mx-auto">
       {% if page.image %}
@@ -23,10 +28,12 @@
 {% endblock %}
 
 {% block page_specific_js %}
+  <script type="text/javascript" src="{% static 'theme/plugins/lightbox/ekko-lightbox.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'theme/plugins/highlight/highlight.pack.js' %} "></script>
 {% endblock %}
 
 {% block custom_page_js %}
-  <script type="text/javascript" src="{% static 'theme/js/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'theme/js/isotope-custom.js' %}"></script>
   <script type="text/javascript" src="{% static 'theme/js/code-highlight.js' %}"></script>
+  <script type="text/javascript" src="{% static 'theme/js/lightbox-custom.js' %}"></script>
 {% endblock %}

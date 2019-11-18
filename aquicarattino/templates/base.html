@@ -1,10 +1,9 @@
 {% load static %}
-
+<!DOCTYPE html>
+<html lang="en">
 {% block head %}
     {% include 'includes/head.html' %}
 {% endblock %}
-<!DOCTYPE html>
-<html lang="en">
 <body>
 <header class="header">
     {% block header %}
@@ -31,5 +30,8 @@
 
 {% block custom_page_js %}
 {% endblock %}
+
+<!-- Custom JS -->
+<script type="text/javascript" src="{% static 'theme/js/main.js' %}"></script>
 </body>
 </html> 

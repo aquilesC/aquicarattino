@@ -4,7 +4,7 @@
 {% block header_extra %}
   <div class="header-intro theme-bg-primary text-white py-5">
     <div class="container">
-      <h2 class="page-heading mb-3">Projects</h2>
+      <h2 class="page-heading mb-3">{{ page.title }}</h2>
       <div class="page-heading-tagline">{{ page.subtitle }}
       </div>
 
@@ -65,10 +65,4 @@
     <!--Page Specific JS -->
   <script type="text/javascript" src="{% static 'theme/plugins/imagesloaded.pkgd.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'theme/plugins/isotope.pkgd.min.js' %}"></script>
-{% endblock %}
-
-{% block custom_page_js %}
-    <!-- Custom JS -->
-  <script type="text/javascript" src="{% static 'theme/js/main.js' %}"></script>
-  <script type="text/javascript" src="{% static 'theme/js/isotope-custom.js' %}"></script>
 {% endblock %}
