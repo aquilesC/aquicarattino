@@ -1,6 +1,5 @@
 {% load static %}
 
-<head>
   <title>
       {% block title %}
           {% block title_prefix %}
@@ -27,10 +26,5 @@
         rel='stylesheet' type='text/css'>
   <!-- FontAwesome JS -->
   <script defer src="{% static 'theme/fontawesome/js/all.js' %}"></script>
-    {% block extra_head_css %}
-    {% endblock %}
-    {% block extra_head_js %}
-    {% endblock %}
   <!-- Theme CSS -->
   <link id="theme-style" rel="stylesheet" href="{% static 'theme/css/theme-1.css' %}">
-</head>

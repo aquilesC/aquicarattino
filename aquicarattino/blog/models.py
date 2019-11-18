@@ -57,8 +57,10 @@ class BlogPage(Page):
         blank=True
     )
     language = models.CharField(max_length=2, choices=LANGUAGES, default='En')
+
     # Using translations as ForeignKeys is very limiting (it is only useful when dealing with 2 languages)
-    translation = models.ForeignKey('wagtailcore.Page', related_name='+', null=True, blank=True, on_delete=models.SET_NULL)
+    translated = models.ForeignKey('wagtailcore.Page', related_name='+', null=True, blank=True, on_delete=models.SET_NULL)
+
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 
     content_panels = Page.content_panels + [
@@ -69,7 +71,7 @@ class BlogPage(Page):
         FieldPanel('date_published'),
         InlinePanel('blog_person_relationship', label='Author (s)', panels=None, min_num=1),
         FieldPanel('tags'),
-        PageChooserPanel('translation')
+        PageChooserPanel('translated')
     ]
 
     parent_page_types = ['BlogIndexPage']
@@ -77,19 +79,21 @@ class BlogPage(Page):
 
     def is_translated(self):
         # If the translation exists we simply return it
-        if self.translation:
-            return self.translation
+        if self.translated:
+            return self.translated
         # If a translation exists, let's update our page and return the translation
         try:
-            self.translation = Page.objects.get(translation=self)
-            self.translation.save()
-            return self.translation
+            self.translated = BlogPage.objects.filter(translated=self).get()
+            self.save()
+            return self.translated
         except Page.DoesNotExist:
             return None
 
     def get_context(self, request):
         context = super(BlogPage, self).get_context(request)
-        context['translation'] = self.is_translated()
+        print(context)
+        context['translated'] = self.is_translated()
+        print(context)
         return context
 
 
