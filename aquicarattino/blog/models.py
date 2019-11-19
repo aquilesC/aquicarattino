@@ -107,12 +107,17 @@ class BlogIndexPage(RoutablePageMixin, Page):
         on_delete=models.SET_NULL,
         related_name='+'
     )
+
+    featured_article = models.ForeignKey(BlogPage, related_name='+', null=True, blank=True, on_delete=models.SET_NULL)
+
     content_panels = Page.content_panels + [
         FieldPanel('subtitle', classname='full'),
-        ImageChooserPanel('image')
+        ImageChooserPanel('image'),
+        PageChooserPanel('featured_article'),
     ]
 
     subpage_types = ['BlogPage']
+
 
     def children(self):
         return self.get_children().specific().live()
