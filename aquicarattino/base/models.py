@@ -72,3 +72,8 @@ class SocialMediaSettings(BaseSetting):
     indiehackers = models.URLField(null=True, blank=True, help_text='Your Indie Hackers Profile')
     codepen = models.URLField(null=True, blank=True, help_text='Your Codepen Profile')
     orcid = models.URLField(null=True, blank=True, help_text='Your ORCID profile')
+
+
+@register_setting
+class GeneralSettings(BaseSetting):
+    footer_text = models.TextField(null=False, blank=False, help_text='Text at the bottom of every page')

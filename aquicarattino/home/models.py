@@ -17,7 +17,7 @@ class HomePage(Page):
     )
 
     intro = RichTextField(null=True,
-                          blank=False,
+                          blank=True,
                           help_text='Information in header')
 
     featured_section_title = models.CharField(
@@ -66,3 +66,15 @@ class HomePage(Page):
             PageChooserPanel('featured_section_2'),
         ])
     ]
+
+
+    def get_context(self, request):
+        context = super(HomePage, self).get_context(request)
+
+        if self.featured_section:
+            context['children_1'] = self.featured_section.get_children().live()[:3]
+
+        if self.featured_section_2:
+            context['children_2'] = self.featured_section_2.get_children().live()[:3]
+
+        return context
