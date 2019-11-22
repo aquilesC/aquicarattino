@@ -1,4 +1,4 @@
-{% load wagtailimages_tags wagtailcore_tags %}
+{% load wagtailimages_tags wagtailcore_tags menu_tags %}
 
 
 <div class="top-bar theme-bg-primary-darken">
@@ -96,6 +96,7 @@
       </button>
 
       <div class="collapse navbar-collapse text-uppercase" id="navigation">
+        {% main_menu template="menus/bootstrap3/main_menu_dropdown.html" %}
         <ul class="navbar-nav ml-lg-auto">
           <li class="nav-item mr-lg-3">
             <a class="nav-link" href="index.html">Home</a>
