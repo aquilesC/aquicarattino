@@ -1,5 +1,7 @@
-from django import template
+from collections import namedtuple
 
+from django import template
+from wagtail.core.models import PageViewRestriction
 
 register = template.Library()
 # https://docs.djangoproject.com/en/1.9/howto/custom-template-tags/
@@ -28,6 +30,18 @@ def has_children(page):
 def is_active(page, current_page):
     # To give us active state on main navigation
     return (current_page.url_path.startswith(page.url_path) if current_page else False)
+
+
+@register.simple_tag(takes_context=True)
+def can_view(context, page):
+    pvrs = PageViewRestriction.objects.filter(page=page)
+    request = context['request']
+    if pvrs:
+        for pvr in pvrs:
+            if pvr.accept_request(request):
+                return True
+        return False
+    return True
 
 
 # Retrieves the top menu items - the immediate children of the parent page

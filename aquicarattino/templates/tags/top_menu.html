@@ -10,7 +10,13 @@
           {% top_menu_children parent=menuitem %}
           {# Used to display child menu items #}
       {% else %}
-        <a href="{% pageurl menuitem %}" class="nav-link" role="menuitem">{{ menuitem.title }}</a>
+        <a href="{% pageurl menuitem %}" class="nav-link" role="menuitem">
+            {% can_view menuitem as permission %}
+            {% if not permission %}
+              <i class="fas fa-lock"></i>
+            {% endif %}
+            {{ menuitem.title }}
+        </a>
       {% endif %}
   </li>
 {% endfor %}
