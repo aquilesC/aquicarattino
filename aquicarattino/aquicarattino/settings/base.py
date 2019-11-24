@@ -29,10 +29,11 @@ INSTALLED_APPS = [
     'blog',
     'resume',
     'search',
-    'wagtailmenus',
+    'wagtailmarkdown',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
+
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',
@@ -54,7 +55,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
+    'widget_tweaks',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.twitter',
 ]
 
 MIDDLEWARE = [
@@ -86,7 +94,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'wagtail.contrib.settings.context_processors.settings',
-                'wagtailmenus.context_processors.wagtailmenus',
             ],
         },
     },
@@ -104,8 +111,10 @@ DATABASES = {
     }
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -164,4 +173,16 @@ WAGTAIL_SITE_NAME = "aquicarattino"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'https://www.aquicarattino.com'
+
+SITE_ID = 1
+
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+ACCOUNT_PRESERVE_USERNAME_CASING = False
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+ACCOUNT_USERNAME_BLACKLIST = ['admin', 'aquiles']
+ACCOUNT_USERNAME_REQUIRED = False

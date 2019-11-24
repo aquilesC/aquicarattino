@@ -1,0 +1,14 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+
+<div class="author-block my-5 bg-white p-3 p-l-5">
+  <div class="media flex-column flex-md-row">
+      {% if author.image %}
+          {% image author.image fill-80x80 class="author-profile profile-small d-inline-block rounded-circle mr-md-4 mb-2 mb-lg-0" %}
+      {% endif %}
+    <div class="author-info media-body">
+      <h4 class="mb-2 font-weight-bold">{{ author.name }}</h4>
+      <div class="mb-3">{{ author.description }}
+      </div>
+    </div>
+  </div>
+</div>

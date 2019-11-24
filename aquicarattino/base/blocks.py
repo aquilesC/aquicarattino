@@ -1,7 +1,6 @@
-from wagtail.core.blocks import StructBlock, TextBlock, CharBlock, URLBlock, ListBlock, StreamBlock, RichTextBlock, \
-    ChoiceBlock
+from wagtail.core.blocks import StructBlock, TextBlock, CharBlock, URLBlock, ListBlock, StreamBlock, RichTextBlock
 from wagtail.images.blocks import ImageChooserBlock
-
+from wagtailmarkdown.blocks import MarkdownBlock
 
 class TestimonialBlock(StructBlock):
     text = TextBlock(required=True)
@@ -69,6 +68,7 @@ class ContentBlock(StreamBlock):
     carousel_block = CarouselBlock()
     testimonial = TestimonialBlock()
     code_block = CodeBlock()
+    markdown_block = MarkdownBlock()
     class Meta:
         icon = 'fa fa-scroll'
         template = 'blocks/content_block.html'

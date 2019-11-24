@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% load static wagtailimages_tags wagtailcore_tags %}
+{% load person_tags %}
+{% load static wagtailimages_tags wagtailcore_tags navigation_tags %}
 
 {% block extra_head_css %}
   <link rel="stylesheet" href="{% static 'theme/plugins/highlight/styles/atom-one-dark.css' %}">
@@ -27,73 +28,23 @@
               {% image page.image width-812 class="img-fluid" %}
           </div>
         {% endif %}
-      {{ page.body }}
+        {{ page.body }}
 
-    <nav class="post-nav d-flex justify-content-between">
-      <div class="nav-previous"><a href="#" rel="prev"><i class="fas fa-long-arrow-alt-left mr-1"></i>Previous <span
-              class="d-none d-md-inline">Post</span></a></div>
-      <div class="nav-next"><a href="#" rel="next">Next <span class="d-none d-md-inline">Post</span><i
-              class="fas fa-long-arrow-alt-right ml-1"></i></a></div>
-    </nav>
+      <nav class="post-nav d-flex justify-content-between">
+        {% if page.prev_sibling %}
+        <div class="nav-previous"><a href="{{ page.prev_sibling.url }}" rel="prev"><i class="fas fa-long-arrow-alt-left mr-1"></i>Previous <span
+                class="d-none d-md-inline">Post</span></a></div>
+        {% endif %}
+      {% if page.next_sibling %}
+        <div class="nav-next"><a href="{{ page.next_sibling.url }}" rel="next">Next <span class="d-none d-md-inline">Post</span><i
+                class="fas fa-long-arrow-alt-right ml-1"></i></a></div>
+      {% endif %}
+      </nav>
 
-    <div class="author-block my-5 bg-white p-3 p-l-5">
-      <div class="media flex-column flex-md-row">
-        <img class="author-profile profile-small d-inline-block rounded-circle mr-md-4 mb-2 mb-lg-0"
-             src="assets/images/profile.jpg" alt="">
-        <div class="author-info media-body">
-          <h4 class="mb-2 font-weight-bold">Steve Doe</h4>
-          <div class="mb-3">I'm a full stack developer with a passion for software development and UX. You can follow me
-            via the various channels below:
-          </div>
-          <ul class="social-list-color list-inline mb-0">
-            <li class="list-inline-item mb-3"><a class="twitter rounded-circle" href="#"><i
-                    class="fab fa-twitter fa-fw"></i></a></li>
-
-            <li class="list-inline-item mb-3"><a class="linkedin rounded-circle" href="#"><i
-                    class="fab fa-linkedin-in fa-fw"></i></a></li>
-            <li class="list-inline-item mb-3"><a class="github rounded-circle" href="#"><i
-                    class="fab fa-github-alt fa-fw"></i></a></li>
-            <li class="list-inline-item mb-3"><a class="stack-overflow rounded-circle" href="#"><i
-                    class="fab fa-stack-overflow fa-fw"></i></a></li>
-            <li class="list-inline-item mb-3"><a class="medium rounded-circle" href="#"><i
-                    class="fab fa-medium-m fa-fw"></i></a></li>
-            <li class="list-inline-item mb-3"><a class="codepen rounded-circle" href="#"><i
-                    class="fab fa-codepen fa-fw"></i></a></li>
-
-
-            <!--<li class="list-inline-item mb-3"><a class="facebook" href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>-->
-
-            <!--<li class="list-inline-item"><a class="instagram" href="#"><i class="fab fa-instagram fa-fw"></i></a></li>-->
-          </ul><!--//social-list-->
-        </div>
-      </div>
+      {% for author in page.authors %}
+        {% render_author author %}
+    {% endfor %}
     </div>
-
-
-    <div id="comments-block" class="comments-block">
-      <!--//DISQUS script starts-->
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var disqus_shortname = '3wmthemes'; // required: replace example with your forum shortname
-
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function () {
-              var dsq = document.createElement('script');
-              dsq.type = 'text/javascript';
-              dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-        Disqus.</a></noscript>
-      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      <!--//DISQUS script ends-->
-
-    </div><!--//comments-block-->
-
-
   </section><!--//single-post-wrapper-->
 
 {% endblock %}

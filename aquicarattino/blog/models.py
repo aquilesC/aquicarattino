@@ -59,7 +59,8 @@ class BlogPage(Page):
     language = models.CharField(max_length=2, choices=LANGUAGES, default='En')
 
     # Using translations as ForeignKeys is very limiting (it is only useful when dealing with 2 languages)
-    translated = models.ForeignKey('wagtailcore.Page', related_name='+', null=True, blank=True, on_delete=models.SET_NULL)
+    translated = models.ForeignKey('wagtailcore.Page', related_name='+', null=True, blank=True,
+                                   on_delete=models.SET_NULL)
 
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 
@@ -89,11 +90,24 @@ class BlogPage(Page):
         except Page.DoesNotExist:
             return None
 
+    def authors(self):
+        authors = [
+            n.people for n in self.blog_person_relationship.all()
+        ]
+
+        return authors
+
+    @property
+    def next_sibling(self):
+        return self.get_next_siblings().type(self.__class__).live().first()
+
+    @property
+    def prev_sibling(self):
+        return self.get_prev_siblings().type(self.__class__).live().first()
+
     def get_context(self, request):
         context = super(BlogPage, self).get_context(request)
-        print(context)
         context['translated'] = self.is_translated()
-        print(context)
         return context
 
 
@@ -117,7 +131,6 @@ class BlogIndexPage(RoutablePageMixin, Page):
     ]
 
     subpage_types = ['BlogPage']
-
 
     def children(self):
         return self.get_children().specific().live()
