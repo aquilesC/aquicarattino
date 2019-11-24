@@ -61,8 +61,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.twitter',
 ]
 
 MIDDLEWARE = [
@@ -186,3 +184,7 @@ ACCOUNT_PRESERVE_USERNAME_CASING = False
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_USERNAME_BLACKLIST = ['admin', 'aquiles']
 ACCOUNT_USERNAME_REQUIRED = False
+
+WAGTAIL_FRONTEND_LOGIN_URL = '/login'
+
+PASSWORD_REQUIRED_TEMPLATE = 'password_required.html'
