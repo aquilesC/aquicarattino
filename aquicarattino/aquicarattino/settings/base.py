@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'home',
     'projects',
     'blog',
+    'blog_feed',
     'resume',
     'search',
     'wagtailmarkdown',
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'widget_tweaks',
     'allauth',
     'allauth.account',
@@ -186,5 +188,3 @@ ACCOUNT_USERNAME_BLACKLIST = ['admin', 'aquiles']
 ACCOUNT_USERNAME_REQUIRED = False
 
 WAGTAIL_FRONTEND_LOGIN_URL = '/login'
-
-PASSWORD_REQUIRED_TEMPLATE = 'password_required.html'

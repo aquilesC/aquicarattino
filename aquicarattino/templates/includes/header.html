@@ -96,8 +96,11 @@
 
       <div class="collapse navbar-collapse text-uppercase" id="navigation">
         <ul class="navbar-nav ml-lg-auto">
-          {% get_site_root as site_root %}
-          {% top_menu parent=site_root calling_page=self %}
+          <li class="nav-item mr-lg-2"><a href="/" class="nav-link" role="menuitem">Home</a></li>
+            {% get_site_root as site_root %}
+            {% top_menu parent=site_root calling_page=self %}
+          <li class="nav-item mr-lg-2"><a href="{% url 'feed' %}" class="nav-link" role="menuitem"> <i
+                  class="fas fa-rss-square"></i></a></li>
         </ul>
         <span id="slide-line"></span>
       </div>

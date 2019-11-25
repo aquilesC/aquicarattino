@@ -72,6 +72,7 @@ class BlogPage(Page):
         FieldPanel('date_published'),
         InlinePanel('blog_person_relationship', label='Author (s)', panels=None, min_num=1),
         FieldPanel('tags'),
+        FieldPanel('language'),
         PageChooserPanel('translated')
     ]
 
@@ -84,6 +85,7 @@ class BlogPage(Page):
             return self.translated
         # If a translation exists, let's update our page and return the translation
         try:
+            print(BlogPage.objects.filter(translated=self).get())
             self.translated = BlogPage.objects.filter(translated=self).get()
             self.save()
             return self.translated
@@ -109,6 +111,9 @@ class BlogPage(Page):
         context = super(BlogPage, self).get_context(request)
         context['translated'] = self.is_translated()
         return context
+
+    def get_absolute_url(self):
+        return self.full_url
 
 
 class BlogIndexPage(RoutablePageMixin, Page):

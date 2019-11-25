@@ -28,22 +28,42 @@
               {% image page.image width-812 class="img-fluid" %}
           </div>
         {% endif %}
+        {% if page.is_translated %}
+          <nav class="post-nav  my-5">
+              {% if page.is_translated.specific.language == 'En' %}
+                This article is also available <a href="{{ page.is_translated.specific.url }}"> in English</a>
+              {% elif page.is_translated.specific.language == 'Es' %}
+                Este artículo también está disponible <a href="{{ page.is_translated.specific.url }}"> en Español</a>
+              {% endif %}
+          </nav>
+        {% endif %}
         {{ page.body }}
+        {% if page.is_translated %}
+          <nav class="post-nav  my-5">
+              {% if page.is_translated.specific.language == 'En' %}
+                This article is also available <a href="{{ page.is_translated.specific.url }}"> in English</a>
+              {% elif page.is_translated.specific.language == 'Es' %}
+                Este artículo también está disponible <a href="{{ page.is_translated.specific.url }}"> en Español</a>
+              {% endif %}
+          </nav>
+        {% endif %}
 
       <nav class="post-nav d-flex justify-content-between">
-        {% if page.prev_sibling %}
-        <div class="nav-previous"><a href="{{ page.prev_sibling.url }}" rel="prev"><i class="fas fa-long-arrow-alt-left mr-1"></i>Previous <span
-                class="d-none d-md-inline">Post</span></a></div>
-        {% endif %}
-      {% if page.next_sibling %}
-        <div class="nav-next"><a href="{{ page.next_sibling.url }}" rel="next">Next <span class="d-none d-md-inline">Post</span><i
-                class="fas fa-long-arrow-alt-right ml-1"></i></a></div>
-      {% endif %}
+          {% if page.prev_sibling %}
+            <div class="nav-previous"><a href="{{ page.prev_sibling.url }}" rel="prev"><i
+                    class="fas fa-long-arrow-alt-left mr-1"></i>Previous <span
+                    class="d-none d-md-inline">Post</span></a></div>
+          {% endif %}
+          {% if page.next_sibling %}
+            <div class="nav-next"><a href="{{ page.next_sibling.url }}" rel="next">Next <span
+                    class="d-none d-md-inline">Post</span><i
+                    class="fas fa-long-arrow-alt-right ml-1"></i></a></div>
+          {% endif %}
       </nav>
 
-      {% for author in page.authors %}
-        {% render_author author %}
-    {% endfor %}
+        {% for author in page.authors %}
+            {% render_author author %}
+        {% endfor %}
     </div>
   </section><!--//single-post-wrapper-->
 
