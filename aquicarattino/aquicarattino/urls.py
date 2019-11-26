@@ -19,6 +19,8 @@ urlpatterns = [
 
     url(r'^search/$', search_views.search, name='search'),
 
+    url(r'^comments/', include('django_comments_xtd.urls')),
+
     url(r'', include('allauth.urls')),
     url('^sitemap\.xml$', sitemap),
     url(r'feed\.rss$', BlogsFeed(), name='feed'),

@@ -58,6 +58,8 @@ class BlogPage(Page):
     )
     language = models.CharField(max_length=2, choices=LANGUAGES, default='En')
 
+    allow_comments = models.BooleanField(default=True)
+
     # Using translations as ForeignKeys is very limiting (it is only useful when dealing with 2 languages)
     translated = models.ForeignKey('wagtailcore.Page', related_name='+', null=True, blank=True,
                                    on_delete=models.SET_NULL)
@@ -73,7 +75,8 @@ class BlogPage(Page):
         InlinePanel('blog_person_relationship', label='Author (s)', panels=None, min_num=1),
         FieldPanel('tags'),
         FieldPanel('language'),
-        PageChooserPanel('translated')
+        PageChooserPanel('translated'),
+        FieldPanel('allow_comments'),
     ]
 
     parent_page_types = ['BlogIndexPage']

@@ -63,6 +63,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_comments_xtd',
+    'django_comments',
 ]
 
 MIDDLEWARE = [
@@ -188,3 +190,7 @@ ACCOUNT_USERNAME_BLACKLIST = ['admin', 'aquiles']
 ACCOUNT_USERNAME_REQUIRED = False
 
 WAGTAIL_FRONTEND_LOGIN_URL = '/login'
+
+COMMENTS_APP = 'django_comments_xtd'
+COMMENTS_XTD_MAX_THREAD_LEVEL = 3
+COMMENTS_XTD_CONFIRM_EMAIL = True
