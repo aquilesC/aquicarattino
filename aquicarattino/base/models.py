@@ -1,3 +1,4 @@
+from django.contrib.sites.models import Site
 from django.db import models
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
@@ -13,6 +14,8 @@ from wagtail.snippets.models import register_snippet
 
 from .blocks import ContentBlock
 
+
+@register_snippet(Site)
 
 @register_snippet
 class People(index.Indexed, ClusterableModel):

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load comments %}
+{% load comments comments_xtd %}
 {% load person_tags %}
 {% load static wagtailimages_tags wagtailcore_tags navigation_tags %}
 
@@ -71,15 +71,15 @@
           {% get_comment_count for self as comment_count %}
           {% if comment_count %}
             <H5 class="text-center">
-              There is {{ comment_count }} comment below.
+              {{ comment_count }} comment{{ comment_count|pluralize }}
             </H5>
             <hr/>
           {% endif %}
 
           {% if self.allow_comments %}
-            <div class="comment">
-              <h4 class="text-center">Post your comment</h4>
-              <div class="well">
+            <div class="card card-block mb-5">
+              <div class="card-body">
+                <h4 class="card-title text-center pb-3">Post your comment</h4>
                   {% render_comment_form for self %}
               </div>
             </div>
@@ -90,7 +90,7 @@
           {% if comment_count %}
             <hr/>
             <div id="comment-list">
-                {% render_comment_list for self %}
+                {% render_xtdcomment_tree for self allow_flagging %}
             </div>
           {% endif %}
       </div>

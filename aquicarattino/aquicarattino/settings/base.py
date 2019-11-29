@@ -194,3 +194,16 @@ WAGTAIL_FRONTEND_LOGIN_URL = '/login'
 COMMENTS_APP = 'django_comments_xtd'
 COMMENTS_XTD_MAX_THREAD_LEVEL = 3
 COMMENTS_XTD_CONFIRM_EMAIL = True
+COMMENTS_XTD_APP_MODEL_OPTIONS = {
+    'default': {
+        'allow_flagging': True,
+        'allow_feedback': True,
+        'show_feedback': True,
+    }
+}
+
+MANAGERS = (
+    ('John Doe', 'john.doe@gmail.com'),
+)
+
+LOGIN_URL = '/login'

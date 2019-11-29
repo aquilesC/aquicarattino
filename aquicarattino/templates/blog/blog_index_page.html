@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static wagtailimages_tags wagtailcore_tags %}
+{% load static wagtailimages_tags wagtailcore_tags comments %}
 
 {% block header_extra %}
   <div class="header-intro theme-bg-primary text-white py-5">
@@ -22,6 +22,7 @@
     <div class="container blog-cards">
       <div class="row">
           {% for post in posts %}
+            {% get_comment_count for post as comment_count %}
             <div class="col-12 col-md-6 col-lg-4 mb-5">
               <div class="card rounded-0 border-0 shadow-sm eq-height">
                 <div class="card-img-container position-relative">
@@ -49,7 +50,9 @@
                   <ul class="meta list-inline mb-0">
                     <li class="list-inline-item mr-3"><i class="far fa-clock mr-2"></i>{{ post.date_published|date }}
                     </li>
-                    <li class="list-inline-item"><i class="fas fa-comment mr-2"></i><a href="#">0 Comments</a></li>
+                    <li class="list-inline-item"><i class="fas fa-comment mr-2"></i>
+                      <a href="#">{{ comment_count }} comment{{ comment_count|pluralize }}</a>
+                    </li>
                   </ul>
                 </div>
               </div><!--//card-->

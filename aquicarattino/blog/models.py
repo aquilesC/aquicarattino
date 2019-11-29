@@ -3,6 +3,7 @@
 from django.contrib import messages
 from django.db import models
 from django.shortcuts import redirect, render
+from django_comments_xtd.moderation import XtdCommentModerator, moderator
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from modelcluster.fields import ParentalKey
 from taggit.models import TaggedItemBase, Tag
@@ -181,3 +182,9 @@ class BlogIndexPage(RoutablePageMixin, Page):
             tags += post.get_tags
         tags = sorted(set(tags))
         return tags
+
+
+class PostCommentModerator(XtdCommentModerator):
+    removal_suggestion_notification = True
+
+moderator.register(BlogPage, PostCommentModerator)
