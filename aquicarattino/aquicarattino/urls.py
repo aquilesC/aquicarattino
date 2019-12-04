@@ -21,7 +21,7 @@ urlpatterns = [
 
     url(r'^comments/', include('django_comments_xtd.urls')),
 
-    url(r'', include('allauth.urls')),
+    url(r'^accounts/', include('allauth.urls')),
     url('^sitemap\.xml$', sitemap),
     url(r'feed\.rss$', BlogsFeed(), name='feed'),
     url(r'', include(wagtail_urls)),

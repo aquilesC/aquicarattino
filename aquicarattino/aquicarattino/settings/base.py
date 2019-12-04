@@ -179,7 +179,10 @@ BASE_URL = 'https://www.aquicarattino.com'
 
 SITE_ID = 1
 
+LOGIN_REDIRECT_URL = '/'
+
 ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_USER_MODEL_USERNAME_FIELD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
@@ -206,4 +209,6 @@ MANAGERS = (
     ('John Doe', 'john.doe@gmail.com'),
 )
 
-LOGIN_URL = '/login'
+DEFAULT_FROM_EMAIL = 'Aquiles Carattino <noreply@aquicarattino.com>'
+LOGIN_URL = '/accounts/login'
+
