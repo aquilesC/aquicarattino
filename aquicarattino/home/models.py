@@ -78,3 +78,8 @@ class HomePage(Page):
             context['children_2'] = self.featured_section_2.get_children().live()[:3]
 
         return context
+
+
+class MeetingsPage(Page):
+    content_panels = Page.content_panels
+
