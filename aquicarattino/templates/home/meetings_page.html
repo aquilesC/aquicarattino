@@ -11,12 +11,12 @@
 
       const options = {
         roomName: '{{ self.title }}',
-        parentNode: document.querySelector('#meet')
+        parentNode: document.querySelector('#meet'),
+        interfaceConfigOverwrite: {
+          VIDEO_LAYOUT_FIT: 'both',
+          JITSI_WATERMARK_LINK: 'https://aquicarattino.com',
+        }
       };
-      const interfaceConfig = {
-        VIDEO_LAYOUT_FIT: 'both',
-      };
-
       const api = new JitsiMeetExternalAPI(domain, options);
     });
   </script>
