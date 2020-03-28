@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ self.title }}</title>
+  <meta charset="UTF-8">
+  <title>{{ self.title }}</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src='https://meet.jit.si/external_api.js'></script>
+  <script>
+    $(document).ready(function () {
+      const domain = 'meeting.aquicarattino.com';
+
+      const options = {
+        roomName: '{{ self.title }}',
+        width: 700,
+        height: 700,
+        parentNode: document.querySelector('#meet')
+      };
+      const api = new JitsiMeetExternalAPI(domain, options);
+    });
+  </script>
+
 </head>
 <body>
 <div id="#meet">
 
 </div>
 
-<script>
-  const domain = 'meeting.aquicarattino.com';
 
-const options = {
-    roomName: '{{ self.title }}',
-    width: 700,
-    height: 700,
-    parentNode: document.querySelector('#meet')
-};
-const api = new JitsiMeetExternalAPI(domain, options);
-</script>
 </body>
 </html>
