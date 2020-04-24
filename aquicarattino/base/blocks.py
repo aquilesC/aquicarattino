@@ -2,6 +2,7 @@ from wagtail.core.blocks import StructBlock, TextBlock, CharBlock, URLBlock, Lis
 from wagtail.images.blocks import ImageChooserBlock
 from wagtailmarkdown.blocks import MarkdownBlock
 
+
 class TestimonialBlock(StructBlock):
     text = TextBlock(required=True)
     author = CharBlock(
