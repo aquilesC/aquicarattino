@@ -1,0 +1,30 @@
+{% load menu_tags %}
+<header role="banner">
+  <div class="container logo-wrap">
+    <div class="row pt-5">
+      <div class="col-12 text-center">
+        <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button"
+           aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+        <h1 class="site-logo"><a href="/">Aquiles Carattino</a></h1>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-md  navbar-light bg-light">
+    <div class="container">
+
+      {% get_menu "main" as main_menu %}
+      {% if main_menu %}
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav mx-auto">
+            {% for item in main_menu.menu_items.all %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </nav>
+</header>

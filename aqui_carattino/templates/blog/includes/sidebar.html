@@ -1,0 +1,50 @@
+{% load wagtailimages_tags menu_tags humanize %}
+
+<div class="col-md-12 col-lg-4 sidebar">
+  <div class="sidebar-box">
+    <div class="bio text-center">
+      {% if sidebar_image %}
+        {% image sidebar_image fill-100x100 class="img-fluid" %}
+      {% endif %}
+      <div class="bio-body">
+        <h2>{{ sidebar_title }}</h2>
+        <p>{{ sidebar_text }}.</p>
+        {% if sidebar_cta %}
+          {#          <p><a href="{{ sidebar_cta_target }}" class="btn btn-primary btn-sm rounded">{{ sidebar_cta }}</a></p>#}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <!-- END sidebar-box -->
+  <div class="sidebar-box">
+    {% get_menu "sticky_sidebar" as stiky_posts %}
+    {% if stiky_posts %}
+      <h3 class="heading">Popular Posts</h3>
+      <div class="post-entry-sidebar">
+        <ul>
+          {% for link in stiky_posts.menu_items.all %}
+            <li>
+              <a href="{{ link.link }}">
+                {% if link.page %}
+                  {% if link.page.specific.header_image %}
+                    {% image link.page.specific.header_image width-90 class="mr-4" %}
+                  {% endif %}
+                {% endif %}
+                <div class="text">
+                  <h4>{{ link.title }}</h4>
+                  {% if link.page %}
+                  <div class="post-meta">
+                    <span class="mr-2">{{ link.page.specific.first_published_at|naturaltime }}</span>
+                  </div>
+                  {% endif %}
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+  <!-- END sidebar-box -->
+</div>
+<!-- END sidebar -->

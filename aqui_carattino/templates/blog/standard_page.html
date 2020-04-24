@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="mb-4">{{ page.title }}</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        {{ page.body }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

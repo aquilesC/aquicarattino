@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+{% block inner_content %}
+{% if page.header_image %}
+  {% image page.header_image width-730 class="img-fluid mb-5" %}
+{% endif %}
+<div class="post-meta">
+  <span class="mr-2">{{ page.first_published_at|naturaltime }} </span>
+</div>
+<h1 class="mb-4">{{ page.title }}</h1>
+{% for tag in page.get_tags %}<span class="category mb-5" href="#">{{ tag }}</span>{% endfor %}
+
+<div class="post-content-body">
+  {{ page.body }}
+</div>
+
+<div class="pt-5">
+  <p>{% for tag in page.get_tags %}<span class="category mb-5" href="#">{{ tag }}</span>{% endfor %}</p>
+</div>
+{% endblock %}
