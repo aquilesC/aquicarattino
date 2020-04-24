@@ -15,10 +15,11 @@ def get_sidebar_info(context):
 
     try:
         sb = Sidebar.objects.first()
-        sidebar_image = sb.image
-        sidebar_title = sb.title
-        sidebar_text = sb.text
-        sidebar_cta = sb.cta
+        if sb:
+            sidebar_image = sb.image
+            sidebar_title = sb.title
+            sidebar_text = sb.text
+            sidebar_cta = sb.cta
         # sidebar_cta_target = sb.cta_target
 
     except Sidebar.DoesNotExist:

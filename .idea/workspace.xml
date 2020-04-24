@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1ac376-6967-4389-9037-e114fe2ef450" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aquicarattino/base/blocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/aquicarattino/base/blocks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aquicarattino.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aquicarattino.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aqui_carattino/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aqui_carattino/blog/templatetags/blog_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/blog/templatetags/blog_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aqui_carattino/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aqui_carattino/templates/blog/article_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/templates/blog/article_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +45,10 @@
     </expand>
     <select />
   </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" module-name="aquicarattino" is-module-sdk="true">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+    <option name="myUseModuleSdk" value="true" />
+    <option name="myModuleName" value="aquicarattino" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,7 +60,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../bakerydemo" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
@@ -72,10 +80,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aqui_carattino/aqui_carattino/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config/settings/local.py" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -169,6 +177,7 @@
       <workItem from="1587709946627" duration="642000" />
       <workItem from="1587717333534" duration="2429000" />
       <workItem from="1587723037403" duration="20736000" />
+      <workItem from="1587758979298" duration="2815000" />
     </task>
     <servers />
   </component>
@@ -196,14 +205,14 @@
       <screen x="59" y="27" width="1541" height="872" />
     </state>
     <state x="756" y="412" width="307" height="232" key="DockerComposeFileDialog/59.27.1541.872@59.27.1541.872" timestamp="1587717512663" />
-    <state x="615" y="176" width="424" height="492" key="FileChooserDialogImpl" timestamp="1587727997181">
+    <state x="615" y="168" width="424" height="492" key="FileChooserDialogImpl" timestamp="1587759939543">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="615" y="176" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1587727997181" />
-    <state x="406" y="111" width="1016" height="738" key="SettingsEditor" timestamp="1587723324652">
+    <state x="615" y="168" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1587759939543" />
+    <state x="406" y="103" width="1016" height="738" key="SettingsEditor" timestamp="1587759949844">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="406" y="111" width="1016" height="738" key="SettingsEditor/59.27.1541.872@59.27.1541.872" timestamp="1587723324652" />
+    <state x="406" y="103" width="1016" height="738" key="SettingsEditor/59.27.1541.872@59.27.1541.872" timestamp="1587759949844" />
     <state x="478" y="187" key="SettingsEditor/59.27.1861.1053@59.27.1861.1053" timestamp="1587012360257" />
     <state x="483" y="287" key="com.intellij.ide.util.TipDialog" timestamp="1585561218024">
       <screen x="47" y="27" width="1553" height="872" />

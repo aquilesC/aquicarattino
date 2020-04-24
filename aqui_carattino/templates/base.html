@@ -1,12 +1,38 @@
 {% load static i18n %}<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{% block title %}Aquiles Carattino Page{% endblock title %}</title>
-
+  <title>
+    {% block title %}
+      {% block title_prefix %}
+        Aquiles Website
+      {% endblock %}
+      {% if self.seo_title %}
+        {{ self.seo_title }}
+      {% else %}
+        {{ self.title }}
+      {% endif %}
+    {% endblock %}
+  </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <meta name="description" content="{% if self.search_description %}{{ self.search_description }}{% endif %}">
+  <meta name="twitter:title" content="{{ self.title }}"/>
+  <meta name="twitter:description" content="{% if self.search_description %}{{ self.search_description }}{% endif %}">
+  <meta name="twitter:creator" content="@_aquic_"/>
+  <meta name="twitter:site" content="@_aquic_">
+
+  <!-- Open Graph data -->
+  <meta property="og:url" content="{{ self.url }}"/>
+  <meta property="og:title" content="{{ self.title }}"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="{% if self.search_description %}{{ self.search_description }}{% endif %}">
+  <meta property="og:site_name" content="Aquiles Carattino"/>
+  {% block extra_head %}{% endblock %}
+
+  <link rel="canonical" href="{{ self.url }}"/>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
 
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
@@ -17,10 +43,10 @@
   <link rel="stylesheet" href="{% static 'fonts/fontawesome/css/font-awesome.min.css' %}">
   <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <!-- This file stores project-specific CSS -->
-{#  <link href="{% static 'css/froala_blocks.css' %}" rel="stylesheet">#}
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {#  <link href="{% static 'css/froala_blocks.css' %}" rel="stylesheet">#}
+
   <link href="{% static 'css/project.css' %}" rel="stylesheet">
 </head>
 
@@ -33,9 +59,6 @@
 </div>
 {% block modal %}{% endblock modal %}
 
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 {% block javascript %}
   <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
   <script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
@@ -45,8 +68,6 @@
   <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
   <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
-
-  <!-- place project specific Javascript in this file -->
 
   <script src="{% static 'js/project.js' %}"></script>
 

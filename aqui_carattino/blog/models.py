@@ -75,10 +75,18 @@ class ArticlePage(Page):
         return [tag.slug for tag in tags]
 
     @property
+    def og_image(self):
+        """ Used in the template for the Open Graph standard"""
+        if self.header_image:
+            url = self.header_image.get_rendition('fill-1200x800|jpegquality-60').url
+            return url
+
+    @property
     def square_header(self):
         """ Used in the template when showing the list of articles"""
-        url = self.header_image.get_rendition('fill-200x200|jpegquality-60').url
-        return url
+        if self.header_image:
+            url = self.header_image.get_rendition('fill-200x200|jpegquality-60').url
+            return url
 
 
 @register_snippet
