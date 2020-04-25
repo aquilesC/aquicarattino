@@ -16,6 +16,13 @@
           </resourceRoots>
         </entryData>
       </entry>
+      <entry url="file://$PROJECT_DIR$/../pftl">
+        <entryData>
+          <resourceRoots>
+            <path value="file://$PROJECT_DIR$/../pftl/static" />
+          </resourceRoots>
+        </entryData>
+      </entry>
     </contentEntries>
   </component>
 </project>

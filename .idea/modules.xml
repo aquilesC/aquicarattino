@@ -3,9 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/aquicarattino.iml" filepath="$PROJECT_DIR$/.idea/aquicarattino.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../bakerydemo/.idea/bakerydemo.iml" filepath="$PROJECT_DIR$/../bakerydemo/.idea/bakerydemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Templates/froala-design-blocks/.idea/froala-design-blocks.iml" filepath="$PROJECT_DIR$/../Templates/froala-design-blocks/.idea/froala-design-blocks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Templates/wordify/wordify/.idea/wordify.iml" filepath="$PROJECT_DIR$/../Templates/wordify/wordify/.idea/wordify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../klimaat_helpdesk/.idea/klimaat_helpdesk.iml" filepath="$PROJECT_DIR$/../klimaat_helpdesk/.idea/klimaat_helpdesk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pftl/.idea/pftl.iml" filepath="$PROJECT_DIR$/../pftl/.idea/pftl.iml" />
     </modules>
   </component>
 </project>

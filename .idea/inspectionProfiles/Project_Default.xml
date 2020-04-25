@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="32">
+          <list size="45">
             <item index="0" class="java.lang.String" itemvalue="dj-database-url" />
             <item index="1" class="java.lang.String" itemvalue="botocore" />
             <item index="2" class="java.lang.String" itemvalue="psycopg2" />
@@ -37,6 +37,19 @@
             <item index="29" class="java.lang.String" itemvalue="flake8-isort" />
             <item index="30" class="java.lang.String" itemvalue="ipdb" />
             <item index="31" class="java.lang.String" itemvalue="Sphinx" />
+            <item index="32" class="java.lang.String" itemvalue="django-anymail" />
+            <item index="33" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="34" class="java.lang.String" itemvalue="Collectfast" />
+            <item index="35" class="java.lang.String" itemvalue="wagtail" />
+            <item index="36" class="java.lang.String" itemvalue="django" />
+            <item index="37" class="java.lang.String" itemvalue="django-environ" />
+            <item index="38" class="java.lang.String" itemvalue="django-crispy-forms" />
+            <item index="39" class="java.lang.String" itemvalue="argon2-cffi" />
+            <item index="40" class="java.lang.String" itemvalue="django-model-utils" />
+            <item index="41" class="java.lang.String" itemvalue="python-slugify" />
+            <item index="42" class="java.lang.String" itemvalue="redis" />
+            <item index="43" class="java.lang.String" itemvalue="django-extensions" />
+            <item index="44" class="java.lang.String" itemvalue="Pillow" />
           </list>
         </value>
       </option>
