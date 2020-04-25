@@ -18,5 +18,4 @@ def get_menu(slug):
 def get_latest_posts():
     posts = ArticlePage.objects.live().order_by(
             '-first_published_at')[:5]
-    print(posts)
     return posts
