@@ -10,7 +10,8 @@
             <h3>Latest Posts</h3>
             <div class="post-entry-sidebar">
               <ul>
-                {% for post in get_latest_posts %}
+                {% get_latest_posts as posts %}
+                {% for post in posts %}
                   <li>
                     <a href="{{ post.url }}">
                       <img src="{{ post.square_header }}" alt="Image placeholder" class="mr-4">

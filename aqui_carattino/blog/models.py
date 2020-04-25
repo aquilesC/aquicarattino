@@ -132,7 +132,7 @@ class IndexPage(Page):
 
     def paginate(self, request, *args):
         page = request.GET.get('page')
-        paginator = Paginator(self.children(), 2)
+        paginator = Paginator(self.children(), 20)
         try:
             pages = paginator.page(page)
         except PageNotAnInteger:

@@ -1,6 +1,6 @@
 from django import template
 
-from aqui_carattino.blog.models import Sidebar, ArticlePage
+from aqui_carattino.blog.models import Sidebar
 
 register = template.Library()
 
@@ -32,10 +32,3 @@ def get_sidebar_info(context):
         'sidebar_cta': sidebar_cta,
         'sidebar_cta_target': sidebar_cta_target,
     }
-
-@register.simple_tag()
-def get_latest_posts():
-    posts = ArticlePage.objects.all().order_by(
-            '-first_published_at')[:5]
-    print(posts)
-    return posts

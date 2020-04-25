@@ -33,9 +33,9 @@
                 <div class="text">
                   <h4>{{ link.title }}</h4>
                   {% if link.page %}
-                  <div class="post-meta">
-                    <span class="mr-2">{{ link.page.specific.first_published_at|naturaltime }}</span>
-                  </div>
+                    <div class="post-meta">
+                      <span class="mr-2">{{ link.page.specific.first_published_at|naturaltime }}</span>
+                    </div>
                   {% endif %}
                 </div>
               </a>
@@ -46,5 +46,20 @@
     {% endif %}
   </div>
   <!-- END sidebar-box -->
+  <div class="sidebar-box">
+    <h3 class="heading">Subscribe to the Newsletter</h3>
+    <p>Keep up to date with the latest news</p>
+    <form enctype="multipart/form-data" method="post" action="/newsletter/aqui-carattino/subscribe/">
+      {% csrf_token %}
+      <div class="form-group">
+      <label for="id_email_field">E-mail:</label> <input type="email" name="email_field" required=""
+                                                         id="id_email_field" class="form-control">
+        </div>
+      <div class="form-group">
+      <button class="btn btn-primary" id="id_submit" name="submit" value="Subscribe" type="submit">Subscribe</button>
+        </div>
+    </form>
+  </div>
 </div>
 <!-- END sidebar -->
+
