@@ -1,0 +1,20 @@
+{% extends "newsletter/common.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter subscribe" %}{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">Thank you for subscribing to our newsletter</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        <p>Your subscription request was successfully received and an activation email has been sent to you.
+          In that email you will find a link which you need to follow in order to activate your subscription.</p>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

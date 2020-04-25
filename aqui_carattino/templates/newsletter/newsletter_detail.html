@@ -1,0 +1,37 @@
+{% extends "newsletter/common.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter detail" %}{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">{{ object.title }}</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        <table>
+          <tr>
+            <td><a href="{% url "newsletter_subscribe_request" object.slug %}">{% trans "Subscribe" %}</a></td>
+          </tr>
+          {% if not user.is_authenticated %}
+            <tr>
+              <td><a href="{% url "newsletter_update_request" object.slug %}">{% trans "Update" %}</a></td>
+            </tr>
+          {% endif %}
+          <tr>
+            <td><a href="{% url "newsletter_unsubscribe_request" object.slug %}">{% trans "Unsubscribe" %}</a></td>
+          </tr>
+          <tr>
+            <td><a href="{% url "newsletter_archive" object.slug %}">{% trans "Archive" %}</a></td>
+          </tr>
+          <tr>
+            <td><a href="../">{% trans "Back to list" %}</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

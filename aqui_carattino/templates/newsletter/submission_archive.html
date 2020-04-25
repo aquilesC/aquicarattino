@@ -1,0 +1,30 @@
+{% extends "newsletter/common.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter archive" %}{% endblock title %}
+
+{% block body %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">{% trans "Newsletter archive" %} {{ newsletter.title }}</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        <table>
+          {% for submission in latest %}
+            <tr>
+              <td><a href="{{ submission.get_absolute_url }}">{{ submission }}</a></td>
+            </tr>
+          {% endfor %}
+          <tr>
+            <td><a href="../">{% trans "Back to list" %}</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}

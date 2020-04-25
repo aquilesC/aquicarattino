@@ -1,0 +1,23 @@
+{% with name=subscription.name title=newsletter.title domain=site.domain url=subscription.subscribe_activate_url %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Subscription to {{ title }}</title>
+</head>
+<body>
+
+<p>Hello!<br/>
+  You have requested a subscription to {{ title }}.</p>
+<p>In order to confirm your subscription, please follow this activation link:<br/>
+  <a href="https://{{ domain }}{{ url }}">https://{{ domain }}{{ url }}</a>
+</p>
+<p>
+  If you have any comments, just reply to this e-mail!
+</p>
+<p>Best regards,<br/>
+  {{ newsletter.sender }}
+</p>
+</body>
+</html>
+{% endwith %}

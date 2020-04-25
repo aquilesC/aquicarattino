@@ -1,0 +1,14 @@
+{% with name=subscription.name title=newsletter.title domain=site.domain  url=subscription.unsubscribe_activate_url %}
+Hello!
+
+We received your request to unsubscribe from {{ title }}.
+
+To confirm the unsubscription, please follow this link:
+
+https://{{ domain }}{{ url }}
+
+We are sorry to see you go, if you would like to let us know why, just reply to this e-mail.
+
+Best regards,
+{{ newsletter.sender }}
+{% endwith %}

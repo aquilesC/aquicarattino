@@ -1,0 +1,20 @@
+{% extends "newsletter/common.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter update" %}{% endblock title %}
+
+{% block content %}
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">{% trans "Newsletter update" %} {{ newsletter.title }}</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        <p>{% trans "Your update request was successfully received and an activation email has been sent to you. In that email you will find a link which you need to follow in order to update your subscription." %}</p>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

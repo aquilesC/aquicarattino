@@ -1,0 +1,37 @@
+{% extends "newsletter/common.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter update" %}{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">{% trans "Newsletter update" %} {{ newsletter.title }}</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        {% if error %}
+          <p>{% trans "Due to a technical error we were not able to submit your confirmation email. This could be because your email address is invalid." %}</p>
+
+          {% comment %} Replace the the following dummy with a valid email address and remove this comment.
+
+        <p>{% trans "If the error persists, please don't hesitate to contact us at the following email address:" %} <a href="mailto:info@foobar.com">info@foobar.com</a></p>
+
+        {% endcomment %}
+        {% else %}
+          <form enctype="multipart/form-data" method="post" action=".">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="form-group container-login100-form-btn">
+              <button type="submit" class="login100-form-btn">{% trans "Update subscription" %}</button>
+            </div>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock content %}

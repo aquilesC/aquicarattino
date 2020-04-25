@@ -1,0 +1,55 @@
+{% extends "newsletter/common.html" %}
+
+{% load i18n %}
+
+{% block title %}Aquiles {% trans "Newsletter list" %}{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">Available Newsletters</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        {% if user.is_authenticated %}
+          <form method="POST" action="">
+            {% csrf_token %}
+            {{ formset.management_form }}
+            <table>
+              <tr>
+                <th>{% trans "Newsletter" %}</th>
+                {% if user %}
+                  <th>{% trans "Subscribe" %}</th>
+                {% endif %}
+              </tr>
+              {% for form in formset.forms %}
+                <tr>
+                  <td>{{ form.id }}{{ form.newsletter }}
+                    <a href="{% url "newsletter_detail" form.instance.newsletter.slug %}">{{ form.instance.newsletter.title }}</a>
+                  </td>
+                  <td>{{ form.subscribed }}</td>
+                </tr>
+              {% endfor %}
+            </table>
+            <p><input id="id_submit" name="submit" value="{% trans "Update subscriptions" %}" type="submit"/></p>
+          </form>
+        {% else %}
+          <table>
+            <tr>
+              <th>{% trans "Newsletter" %}</th>
+            </tr>
+            {% for newsletter in object_list %}
+              <tr>
+                <td><a href="{% url "newsletter_detail" newsletter.slug %}">{{ newsletter.title }}</a></td>
+              </tr>
+            {% endfor %}
+          </table>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}

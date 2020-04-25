@@ -1,0 +1,36 @@
+{% extends "newsletter/common.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter" %} {{ newsletter.title }} {{ action }}
+  {% trans "activate" %}{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">Confirm Subscription</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        {% if messages %}
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <form enctype="multipart/form-data" method="post"
+                action=".">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="form-group container-login100-form-btn">
+              <button type="submit" class="login100-form-btn">{% trans "Activate" %}</button>
+            </div>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock content %}

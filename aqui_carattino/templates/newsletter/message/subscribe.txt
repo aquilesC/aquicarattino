@@ -1,0 +1,14 @@
+{% with name=subscription.name title=newsletter.title domain=site.domain url=subscription.subscribe_activate_url %}
+Hello!
+
+You have requested a subscription to {{ title }}.
+
+In order to confirm your subscription, please follow this activation link:
+
+https://{{ domain }}{{ url }}
+
+If you have any comments, just reply to this e-mail!
+
+Best regards,
+{{ newsletter.sender }}
+{% endwith %}

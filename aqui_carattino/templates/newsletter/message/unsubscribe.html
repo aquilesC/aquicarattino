@@ -1,0 +1,19 @@
+{% with name=subscription.name title=newsletter.title domain=site.domain url=subscription.unsubscribe_activate_url %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Unsubscription from {{ title }}</title>
+</head>
+<body>
+<p>Hello!<br />
+  We received your request to unsubscribe from {{ title }}.</p>
+<p>To confirm the unsubscription, please follow this link:<br />
+<a href="https://{{ domain }}{{ url }}">https://{{ domain }}{{ url }}</a>
+</p>
+<p>We are sorry to see you go, if you would like to let us know why, just reply to this e-mail.</p>
+<p>Best regards,<br />
+{{ newsletter.sender }}</p>
+</body>
+</html>
+{% endwith %}

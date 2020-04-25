@@ -1,0 +1,31 @@
+{% extends "newsletter/common.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter subscribe" %}{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">{% trans "Newsletter subscribe" %} {{ newsletter.title }}</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        {% if error %}
+          <p>{% trans "Due to a technical error we were not able to submit your confirmation email. This could be because your email address is invalid." %}</p>
+        {% else %}
+          <form enctype="multipart/form-data" method="post" action=".">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="form-group container-login100-form-btn">
+              <button type="submit" class="login100-form-btn">{% trans "Subscribe" %}</button>
+            </div>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock content %}

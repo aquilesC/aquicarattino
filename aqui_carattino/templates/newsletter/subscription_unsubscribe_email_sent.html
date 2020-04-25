@@ -1,0 +1,19 @@
+{% extends "newsletter/common.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter unsubscribe" %}{% endblock title %}
+
+{% block content %}
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">Unsubscribe from {{ newsletter.title }}</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        <p>{% trans "Your unsubscription request has successfully been received. An email has been sent to you with a link you need to follow in order to confirm your unsubscription." %}</p>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

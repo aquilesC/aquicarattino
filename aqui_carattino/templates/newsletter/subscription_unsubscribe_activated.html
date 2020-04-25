@@ -1,0 +1,20 @@
+{% extends "newsletter/common.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter" %} {{ newsletter.title }} {{ action }} {% trans "activate" %}{% endblock title %}
+
+{% block content %}
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="mb-4">We are sad to see you go!</h2>
+      </div>
+    </div>
+    <div class="row blog-entries">
+      <div class="col-md-12 main-content mb-5">
+        <p>{% trans "You have successfully been unsubscribed." %}</p>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
