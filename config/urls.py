@@ -15,7 +15,7 @@ urlpatterns = [
     # User management
     # path("users/", include("aqui_carattino.users.urls", namespace="users")),
     # path("accounts/", include("allauth.urls")),
-    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('images/favicon.ico'))),
+    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('images/favicons/favicon.ico'))),
     re_path(r'^cms/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
     path('newsletter/', include('newsletter.urls')),
