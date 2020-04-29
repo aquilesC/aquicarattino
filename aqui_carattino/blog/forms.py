@@ -5,7 +5,7 @@ from aqui_carattino.blog.models import ArticlePage
 
 class BlogsFeed(Feed):
     title = "Aquiles Carattino"
-    link = "/feed/"
+    link = "/blog"
     description = "Follow my path from science to entrepreneurship"
 
     description_template = 'feed/item_description.html'

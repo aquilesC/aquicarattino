@@ -17,7 +17,7 @@ urlpatterns = [
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     url('^sitemap\.xml$', sitemap),
-    url(r'feed\.rss$', BlogsFeed(), name='feed'),
+    url(r'feed\.xml$', BlogsFeed(), name='feed'),
     # User management
     # path("users/", include("aqui_carattino.users.urls", namespace="users")),
     # path("accounts/", include("allauth.urls")),
