@@ -103,13 +103,16 @@ class Sidebar(models.Model):
     title = models.CharField(max_length=50, blank=False, null=False)
     text = models.TextField()
     cta = models.CharField(max_length=15, blank=True, null=True, verbose_name='Call to action text')
-
+    sidebar_cta_target = models.CharField(max_length=255, blank=True, null=True, verbose_name='What does the CTA link')
     panels = [
         FieldPanel('title'),
         FieldPanel('text'),
         FieldPanel('cta'),
         ImageChooserPanel('image'),
     ]
+
+    def __str__(self):
+        return "Sidebar for Articles"
 
 
 class IndexPage(Page):

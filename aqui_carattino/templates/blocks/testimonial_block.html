@@ -1,24 +1,24 @@
 {% load wagtailimages_tags wagtailcore_tags %}
 <div class="container">
-        <div class="fdb-box">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2 m-auto">
-              {% if self.image %}
-                {% image self.image fill-80x80 class="img-fluid rounded-circle" %}
-              {% endif %}
-            </div>
-
-            <div class="col-12 col-md-8 ml-auto mr-auto mt-4 mt-md-0">
-              <p class="lead">
-                {{ self.text }}
-              </p>
-
-              <p class="h3 mt-4 mt-lg-5"><strong>{{ self.author }}</strong></p>
-              <p><em>{{ self.author_title }}</em></p>
-            </div>
-          </div>
-        </div>
+  <div class="fdb-box">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2 m-auto">
+        {% if self.image %}
+          {% image self.image fill-80x80 class="img-fluid rounded-circle" %}
+        {% endif %}
       </div>
+
+      <div class="col-12 col-md-8 ml-auto mr-auto mt-4 mt-md-0">
+        <p class="lead">
+          {{ self.text }}
+        </p>
+
+        <p class="h3 mt-4 mt-lg-5"><strong>{{ self.author }}</strong></p>
+        <p><em>{{ self.author_title }}</em></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="testimonial bg-white my-5">
   <div class="position-relative p-5 shadow-sm">
@@ -27,9 +27,9 @@
       <i class="quote-icon fas fa-quote-left fa-lg position-absolute text-primary"></i>
       <footer class="blockquote-footer presudo-hidden">
         <div class="media client-profile flex-column flex-md-row">
-            {% if self.image %}
-                {% image self.image fill-80x80 class="mr-md-3" %}
-            {% endif %}
+          {% if self.image %}
+            {% image self.image fill-80x80 class="mr-md-3" %}
+          {% endif %}
           <cite title="Source" class="quote-source d-inline-block font-style-normal pt-3">
             <span class="d-block">{{ self.author }}</span>
             <span class="d-block">{% if self.author_title %}{{ self.author_title }}{% endif %}</span>

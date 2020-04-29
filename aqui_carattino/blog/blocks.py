@@ -1,4 +1,5 @@
 from wagtail.core.blocks import StreamBlock, RichTextBlock, StructBlock, TextBlock, CharBlock, URLBlock, ListBlock
+from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.blocks import ImageChooserBlock
 
 
@@ -28,7 +29,7 @@ class CarouselBlock(StructBlock):
     )
 
     class Meta:
-        icon = "fa-images"
+        icon = "image"
         template = "blocks/carousel_block.html"
 
 
@@ -60,9 +61,10 @@ class CodeBlock(StructBlock):
 
 class ContentBlock(StreamBlock):
     text = RichTextBlock(
-        icon='fa fa-paragraph',
+        icon='fa-paragraph',
         template='blocks/paragraph_block.html'
     )
+    embed_block = EmbedBlock()
     alert_block = AlertBlock(required=False)
     button_block = ButtonBlock(required=False)
     carousel_block = CarouselBlock()
