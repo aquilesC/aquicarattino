@@ -108,6 +108,7 @@ class Sidebar(models.Model):
         FieldPanel('title'),
         FieldPanel('text'),
         FieldPanel('cta'),
+        FieldPanel('sidebar_cta_target'),
         ImageChooserPanel('image'),
     ]
 

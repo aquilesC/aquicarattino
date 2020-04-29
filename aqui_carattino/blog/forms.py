@@ -4,9 +4,11 @@ from aqui_carattino.blog.models import ArticlePage
 
 
 class BlogsFeed(Feed):
-    title = "Python for the lab blog articles"
+    title = "Aquiles Carattino"
     link = "/feed/"
-    description = "All the articles as they are published"
+    description = "Follow my path from science to entrepreneurship"
+
+    description_template = 'feed/item_description.html'
 
     def items(self):
         return ArticlePage.objects.live().order_by('-first_published_at')
@@ -15,4 +17,7 @@ class BlogsFeed(Feed):
         return item.title
 
     def item_description(self, item):
-        return item.introduction
+        return item.body
+
+    def item_link(self, item):
+        return item.url
