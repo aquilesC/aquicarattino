@@ -62,6 +62,7 @@ DJANGO_APPS = [
     "django.contrib.humanize",  # Handy template tags
     "django.contrib.admin",
     "django.forms",
+    "django.contrib.sitemaps",
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -86,6 +87,7 @@ WAGTAIL_APPS = [
     'wagtail.contrib.modeladmin',
     'modelcluster',
     'taggit',
+    'wagtailfontawesome',
 ]
 
 LOCAL_APPS = [

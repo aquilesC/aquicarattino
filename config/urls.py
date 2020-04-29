@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.staticfiles.storage import staticfiles_storage
@@ -6,12 +7,17 @@ from django.urls import include, path, re_path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView, RedirectView
 from wagtail.admin import urls as wagtailadmin_urls
+from wagtail.contrib.sitemaps.views import sitemap
 from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
+
+from aqui_carattino.blog.forms import BlogsFeed
 
 urlpatterns = [
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
+    url('^sitemap\.xml$', sitemap),
+    url(r'feed\.rss$', BlogsFeed(), name='feed'),
     # User management
     # path("users/", include("aqui_carattino.users.urls", namespace="users")),
     # path("accounts/", include("allauth.urls")),
