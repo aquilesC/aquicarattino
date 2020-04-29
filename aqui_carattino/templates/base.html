@@ -3,20 +3,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>
-    {% block title %}
-      {% block title_prefix %}
-        Aquiles Website
-      {% endblock %}
-      {% if self.seo_title %}
-        {{ self.seo_title }}
-      {% else %}
-        {{ self.title }}
-      {% endif %}
-    {% endblock %}
-  </title>
+  <title>{% block title %}{% block title_prefix %}Aquiles Carattino | {% endblock %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url 'feed' %}">
   <meta name="description" content="{% if self.search_description %}{{ self.search_description }}{% endif %}">
   <meta name="twitter:title" content="{{ self.title }}"/>
   <meta name="twitter:description" content="{% if self.search_description %}{{ self.search_description }}{% endif %}">
