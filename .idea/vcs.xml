@@ -2,7 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../deploy-django" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../camiyaqui" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../pftl" vcs="Git" />
   </component>
 </project>

@@ -16,8 +16,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 3.6 (aquicarattino)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="pftl" />
-    <orderEntry type="module" module-name="deploy-django" />
+    <orderEntry type="module" module-name="camiyaqui" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

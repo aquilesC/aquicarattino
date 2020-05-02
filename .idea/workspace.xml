@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1ac376-6967-4389-9037-e114fe2ef450" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/misc/dokku/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/aquicarattino.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aquicarattino.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/aws/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/aws/maintenance/download" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/aws/maintenance/upload" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/django/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/django/entrypoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/django/start" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/postgres/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/_sourced/constants.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/_sourced/countdown.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/_sourced/messages.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/_sourced/yes_no.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/backup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/backups" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/restore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/traefik/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/production/traefik/traefik.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../camiyaqui/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../camiyaqui/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +75,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../deploy-django" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../camiyaqui" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
@@ -80,7 +97,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deploy-django" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../camiyaqui/.envs" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
@@ -94,11 +111,11 @@
       <recent name="$PROJECT_DIR$/aquicarattino/templates/blocks" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../camiyaqui/.envs" />
+      <recent name="$PROJECT_DIR$/../camiyaqui" />
+      <recent name="$PROJECT_DIR$/../pftl_docker/.envs" />
       <recent name="$PROJECT_DIR$/../pftl/pftl" />
       <recent name="$PROJECT_DIR$/../pftl" />
-      <recent name="$PROJECT_DIR$/aqui_carattino/templates" />
-      <recent name="$PROJECT_DIR$/../aqui_carattino/aqui_carattino/static/js" />
-      <recent name="$PROJECT_DIR$/../aqui_carattino/aqui_carattino/static/fonts" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,7 +208,9 @@
       <workItem from="1588060221112" duration="3734000" />
       <workItem from="1588134279252" duration="4497000" />
       <workItem from="1588266341604" duration="3167000" />
-      <workItem from="1588361417745" duration="6601000" />
+      <workItem from="1588361417745" duration="17972000" />
+      <workItem from="1588420066642" duration="7491000" />
+      <workItem from="1588432504770" duration="7608000" />
     </task>
     <servers />
   </component>
@@ -219,10 +238,10 @@
       <screen x="59" y="27" width="1541" height="872" />
     </state>
     <state x="756" y="412" width="307" height="232" key="DockerComposeFileDialog/59.27.1541.872@59.27.1541.872" timestamp="1587717512663" />
-    <state x="615" y="88" width="424" height="492" key="FileChooserDialogImpl" timestamp="1588395774196">
+    <state x="615" y="56" width="424" height="492" key="FileChooserDialogImpl" timestamp="1588448336565">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="615" y="88" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1588395774196" />
+    <state x="615" y="56" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1588448336565" />
     <state x="406" y="103" width="1016" height="738" key="SettingsEditor" timestamp="1587759949844">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
@@ -232,18 +251,26 @@
       <screen x="47" y="27" width="1553" height="872" />
     </state>
     <state x="483" y="287" key="com.intellij.ide.util.TipDialog/47.27.1553.872@47.27.1553.872" timestamp="1585561218024" />
+    <state x="340" y="84" width="770" height="781" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588407985864">
+      <screen x="59" y="27" width="1541" height="872" />
+    </state>
+    <state x="340" y="84" width="770" height="781" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/59.27.1541.872@59.27.1541.872" timestamp="1588407985864" />
     <state x="678" y="391" width="467" height="218" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1587718264063">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
     <state x="678" y="391" width="467" height="218" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/59.27.1541.872@59.27.1541.872" timestamp="1587718264063" />
-    <state x="282" y="199" width="890" height="542" key="find.popup" timestamp="1587967551417">
+    <state x="282" y="199" width="890" height="542" key="find.popup" timestamp="1588409845686">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="282" y="199" width="890" height="542" key="find.popup/59.27.1541.872@59.27.1541.872" timestamp="1587967551417" />
+    <state x="282" y="199" width="890" height="542" key="find.popup/59.27.1541.872@59.27.1541.872" timestamp="1588409845686" />
     <state x="664" y="230" width="327" height="463" key="refactoring.ChangeSignatureDialog" timestamp="1587738885952">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
     <state x="664" y="230" width="327" height="463" key="refactoring.ChangeSignatureDialog/59.27.1541.872@59.27.1541.872" timestamp="1587738885952" />
+    <state x="492" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1588405172960">
+      <screen x="59" y="27" width="1541" height="872" />
+    </state>
+    <state x="492" y="206" width="672" height="678" key="search.everywhere.popup/59.27.1541.872@59.27.1541.872" timestamp="1588405172960" />
     <state x="557" y="289" width="540" height="345" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587790456905">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
