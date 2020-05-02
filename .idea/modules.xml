@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/aquicarattino.iml" filepath="$PROJECT_DIR$/.idea/aquicarattino.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../deploy-django/.idea/deploy-django.iml" filepath="$PROJECT_DIR$/../deploy-django/.idea/deploy-django.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pftl/.idea/pftl.iml" filepath="$PROJECT_DIR$/../pftl/.idea/pftl.iml" />
     </modules>
   </component>
 </project>

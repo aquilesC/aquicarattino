@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1ac376-6967-4389-9037-e114fe2ef450" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/misc/dokku/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/aquicarattino.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aquicarattino.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aqui_carattino/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +52,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../deploy-django" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
@@ -67,7 +66,9 @@
     </layout>
   </component>
   <component name="ProjectId" id="1OYWpxTDZ5wrfZnyGtfQhISWEXp" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -79,7 +80,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PythonForTheLab/PythonForTheLab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deploy-django" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
@@ -186,7 +187,11 @@
       <workItem from="1587966460033" duration="2242000" />
       <workItem from="1587990969938" duration="882000" />
       <workItem from="1588002275204" duration="1097000" />
-      <workItem from="1588016587916" duration="886000" />
+      <workItem from="1588016587916" duration="1026000" />
+      <workItem from="1588060221112" duration="3734000" />
+      <workItem from="1588134279252" duration="4497000" />
+      <workItem from="1588266341604" duration="3167000" />
+      <workItem from="1588361417745" duration="6601000" />
     </task>
     <servers />
   </component>
@@ -214,10 +219,10 @@
       <screen x="59" y="27" width="1541" height="872" />
     </state>
     <state x="756" y="412" width="307" height="232" key="DockerComposeFileDialog/59.27.1541.872@59.27.1541.872" timestamp="1587717512663" />
-    <state x="615" y="112" width="424" height="492" key="FileChooserDialogImpl" timestamp="1588003370468">
+    <state x="615" y="88" width="424" height="492" key="FileChooserDialogImpl" timestamp="1588395774196">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="615" y="112" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1588003370468" />
+    <state x="615" y="88" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1588395774196" />
     <state x="406" y="103" width="1016" height="738" key="SettingsEditor" timestamp="1587759949844">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
