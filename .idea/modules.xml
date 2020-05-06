@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/aquicarattino.iml" filepath="$PROJECT_DIR$/.idea/aquicarattino.iml" />
       <module fileurl="file://$PROJECT_DIR$/../camiyaqui/.idea/camiyaqui.iml" filepath="$PROJECT_DIR$/../camiyaqui/.idea/camiyaqui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pftl_docker/.idea/pftl.iml" filepath="$PROJECT_DIR$/../pftl_docker/.idea/pftl.iml" />
     </modules>
   </component>
 </project>

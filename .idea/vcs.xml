@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../camiyaqui" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../pftl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../pftl_docker" vcs="Git" />
   </component>
 </project>

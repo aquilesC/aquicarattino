@@ -6,24 +6,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/aws/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/aws/maintenance/download" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/aws/maintenance/upload" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/django/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/django/entrypoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/django/start" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/postgres/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/_sourced/constants.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/_sourced/countdown.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/_sourced/messages.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/_sourced/yes_no.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/backups" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/postgres/maintenance/restore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/traefik/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose/production/traefik/traefik.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../camiyaqui/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../camiyaqui/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pftl/pftl/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pftl/pftl/settings/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,13 +52,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../camiyaqui" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../pftl_docker" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
@@ -97,7 +80,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../camiyaqui/.envs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pftl" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
@@ -211,6 +194,8 @@
       <workItem from="1588361417745" duration="17972000" />
       <workItem from="1588420066642" duration="7491000" />
       <workItem from="1588432504770" duration="7608000" />
+      <workItem from="1588491160125" duration="1930000" />
+      <workItem from="1588654484090" duration="4399000" />
     </task>
     <servers />
   </component>
@@ -238,10 +223,10 @@
       <screen x="59" y="27" width="1541" height="872" />
     </state>
     <state x="756" y="412" width="307" height="232" key="DockerComposeFileDialog/59.27.1541.872@59.27.1541.872" timestamp="1587717512663" />
-    <state x="615" y="56" width="424" height="492" key="FileChooserDialogImpl" timestamp="1588448336565">
+    <state x="615" y="32" width="424" height="492" key="FileChooserDialogImpl" timestamp="1588654754293">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="615" y="56" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1588448336565" />
+    <state x="615" y="32" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1588654754293" />
     <state x="406" y="103" width="1016" height="738" key="SettingsEditor" timestamp="1587759949844">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
