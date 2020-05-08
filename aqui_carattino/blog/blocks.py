@@ -22,6 +22,14 @@ class TestimonialBlock(StructBlock):
         template = "blocks/testimonial_block.html"
 
 
+class QuotableShare(StructBlock):
+    text = TextBlock(required=True)
+
+    class Meta:
+        icon = 'fa-twitter'
+        template = 'blocks/quotable_share.html'
+
+
 class CarouselBlock(StructBlock):
     image_items = ListBlock(
         ImageChooserBlock(required=True),
@@ -89,6 +97,7 @@ class ContentBlock(StreamBlock):
     button_block = ButtonBlock(required=False)
     carousel_block = CarouselBlock()
     testimonial = TestimonialBlock()
+    quotable_share = QuotableShare()
     code_block = CodeBlock()
     full_width_image = FullWidthImageBlock()
     side_by_side_images = SideBySideImages()

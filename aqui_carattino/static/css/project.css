@@ -11,3 +11,27 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+.quotable-share blockquote {
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 1.5em 0 0.5em;
+  margin: 1.5em 0;
+  position: relative;
+}
+
+.quotable-share blockquote:before{
+  font-family: FontAwesome;
+  content: "\f10d";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  color: #666;
+  text-align: center;
+}

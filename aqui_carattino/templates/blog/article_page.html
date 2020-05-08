@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load humanize %}
-{% load wagtailimages_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block extra_head %}
   {% if self.image %}
@@ -24,7 +24,9 @@
   {% for tag in page.get_tags %}<span class="category" href="#">{{ tag }}</span>{% endfor %}
 
   <div class="post-content-body">
-    {{ page.body }}
+    {% for block in page.body %}
+      {% include_block block %}
+    {% endfor %}
   </div>
 
   <div class="pt-5">

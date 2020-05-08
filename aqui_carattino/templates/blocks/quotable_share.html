@@ -1,0 +1,9 @@
+{% load wagtailcore_tags %}
+<!-- Quotable Share -->
+<div class="quotable-share my-md">
+  <blockquote class="pl-4">
+    <p class="mb-4">{{ self.text }}</p>
+    <a class="btn-floating btn-lg btn-tw share-button" type="button" role="button"
+       href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ self.text }}" target="_blank"><i class="fab fa-twitter"></i></a>
+  </blockquote>
+</div><!--// Quotable Share-->
