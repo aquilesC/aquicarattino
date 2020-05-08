@@ -6,6 +6,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aqui_carattino/blog/blocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/blog/blocks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aqui_carattino/static/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/static/css/project.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aqui_carattino/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aqui_carattino/templates/blog/article_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/aqui_carattino/templates/blog/article_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pftl/pftl/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pftl/pftl/settings/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,13 +57,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../pftl_docker" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
@@ -80,25 +85,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pftl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Templates/wordify/wordify/blog-single.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/compose" />
+      <recent name="$PROJECT_DIR$/../camiyaqui/.envs" />
+      <recent name="$PROJECT_DIR$/../camiyaqui" />
+      <recent name="$PROJECT_DIR$/../pftl_docker/.envs" />
+      <recent name="$PROJECT_DIR$/../pftl/pftl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../pftl/pftl" />
       <recent name="$PROJECT_DIR$/../pftl/config" />
       <recent name="$PROJECT_DIR$/aqui_carattino/static/images" />
       <recent name="$PROJECT_DIR$/aquicarattino/templates/resume" />
       <recent name="$PROJECT_DIR$/aquicarattino/templates/blocks" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../camiyaqui/.envs" />
-      <recent name="$PROJECT_DIR$/../camiyaqui" />
-      <recent name="$PROJECT_DIR$/../pftl_docker/.envs" />
-      <recent name="$PROJECT_DIR$/../pftl/pftl" />
-      <recent name="$PROJECT_DIR$/../pftl" />
     </key>
   </component>
   <component name="RunManager">
@@ -196,6 +201,7 @@
       <workItem from="1588432504770" duration="7608000" />
       <workItem from="1588491160125" duration="1930000" />
       <workItem from="1588654484090" duration="4399000" />
+      <workItem from="1588912052587" duration="8557000" />
     </task>
     <servers />
   </component>
@@ -223,10 +229,10 @@
       <screen x="59" y="27" width="1541" height="872" />
     </state>
     <state x="756" y="412" width="307" height="232" key="DockerComposeFileDialog/59.27.1541.872@59.27.1541.872" timestamp="1587717512663" />
-    <state x="615" y="32" width="424" height="492" key="FileChooserDialogImpl" timestamp="1588654754293">
+    <state x="615" y="24" width="424" height="492" key="FileChooserDialogImpl" timestamp="1588913763442">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="615" y="32" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1588654754293" />
+    <state x="615" y="24" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1588913763442" />
     <state x="406" y="103" width="1016" height="738" key="SettingsEditor" timestamp="1587759949844">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
