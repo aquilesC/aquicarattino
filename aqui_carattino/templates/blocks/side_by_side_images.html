@@ -1,0 +1,8 @@
+{% load wagtailimages_tags %}
+<div class="row mb-5">
+  {% for img in self.images %}
+    <div class="col-md-6 mb-4">
+      {% image img width-350 class='img-fluid' %}
+    </div>
+  {% endfor %}
+</div>

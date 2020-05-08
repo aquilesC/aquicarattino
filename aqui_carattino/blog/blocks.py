@@ -59,6 +59,26 @@ class CodeBlock(StructBlock):
         template = 'blocks/code_block.html'
 
 
+class FullWidthImageBlock(StructBlock):
+    image = ImageChooserBlock(required=True)
+
+    class Meta:
+        icon = 'image'
+        template = 'blocks/full_width_image.html'
+
+
+class SideBySideImages(StructBlock):
+    images = ListBlock(
+        ImageChooserBlock(required=True),
+        label="Image Item"
+    )
+
+    class Meta:
+        icon = "image"
+        template = 'blocks/side_by_side_images.html'
+
+
+
 class ContentBlock(StreamBlock):
     text = RichTextBlock(
         icon='fa-paragraph',
@@ -70,6 +90,8 @@ class ContentBlock(StreamBlock):
     carousel_block = CarouselBlock()
     testimonial = TestimonialBlock()
     code_block = CodeBlock()
+    full_width_image = FullWidthImageBlock()
+    side_by_side_images = SideBySideImages()
 
     class Meta:
         icon = 'fa fa-scroll'
