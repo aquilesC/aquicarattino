@@ -6,10 +6,6 @@ body {
   line-height: 1.2;
   color: #6c757d; }
 
-.post-content-body{
-  text-align: justify;
-}
-
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
