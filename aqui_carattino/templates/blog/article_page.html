@@ -20,8 +20,8 @@
   <div class="post-meta">
     <span class="mr-2">{{ page.first_published_at|naturaltime }} </span>
   </div>
-  <div class="post-title mb-2">
-  <h1 class="mb-4">{{ page.title }}</h1>
+  <div class="post-title mb-4">
+  <h1 class="mb-3">{{ page.title }}</h1>
   {% for tag in page.get_tags %}<span class="category" href="#">{{ tag }}</span>{% endfor %}
   </div>
 
