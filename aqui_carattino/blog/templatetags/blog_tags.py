@@ -20,7 +20,7 @@ def get_sidebar_info(context):
             sidebar_title = sb.title
             sidebar_text = sb.text
             sidebar_cta = sb.cta
-            sidebar_cta_target = sb.cta_target
+            sidebar_cta_target = sb.sidebar_cta_target
 
     except Sidebar.DoesNotExist:
         pass
