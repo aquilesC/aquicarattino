@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1ac376-6967-4389-9037-e114fe2ef450" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/template/blog/index_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/blog/standard_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template" beforeDir="false" afterPath="$PROJECT_DIR$/template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/template/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pftl/pftl/static/img/newsletter_banner.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../pftl/pftl/static/img/newsletter_banner.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +50,12 @@
         <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/template" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
@@ -84,7 +77,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/blocks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -203,7 +196,14 @@
       <workItem from="1588654484090" duration="4399000" />
       <workItem from="1588912052587" duration="9525000" />
       <workItem from="1590258400645" duration="3247000" />
-      <workItem from="1591038166765" duration="3947000" />
+      <workItem from="1591038166765" duration="5598000" />
+      <workItem from="1591295936500" duration="4683000" />
+      <workItem from="1591475440394" duration="2393000" />
+      <workItem from="1591720892726" duration="482000" />
+      <workItem from="1592341792699" duration="598000" />
+      <workItem from="1592730965113" duration="612000" />
+      <workItem from="1596129536941" duration="1319000" />
+      <workItem from="1599977378439" duration="1316000" />
     </task>
     <servers />
   </component>
@@ -223,50 +223,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="532" y="260" width="590" height="404" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587728618400">
+    <state x="615" y="19" width="424" height="492" key="FileChooserDialogImpl" timestamp="1596130875592">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="532" y="260" width="590" height="404" key="#com.intellij.fileTypes.FileTypeChooser/59.27.1541.872@59.27.1541.872" timestamp="1587728618400" />
-    <state x="756" y="412" width="307" height="232" key="DockerComposeFileDialog" timestamp="1587717512663">
+    <state x="615" y="19" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1596130875592" />
+    <state x="321" y="93" width="1016" height="738" key="SettingsEditor" timestamp="1599977416312">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="756" y="412" width="307" height="232" key="DockerComposeFileDialog/59.27.1541.872@59.27.1541.872" timestamp="1587717512663" />
-    <state x="615" y="19" width="424" height="492" key="FileChooserDialogImpl" timestamp="1590263223584">
-      <screen x="59" y="27" width="1541" height="872" />
-    </state>
-    <state x="615" y="19" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1590263223584" />
-    <state x="406" y="103" width="1016" height="738" key="SettingsEditor" timestamp="1587759949844">
-      <screen x="59" y="27" width="1541" height="872" />
-    </state>
-    <state x="406" y="103" width="1016" height="738" key="SettingsEditor/59.27.1541.872@59.27.1541.872" timestamp="1587759949844" />
-    <state x="478" y="187" key="SettingsEditor/59.27.1861.1053@59.27.1861.1053" timestamp="1587012360257" />
-    <state x="483" y="287" key="com.intellij.ide.util.TipDialog" timestamp="1585561218024">
-      <screen x="47" y="27" width="1553" height="872" />
-    </state>
-    <state x="483" y="287" key="com.intellij.ide.util.TipDialog/47.27.1553.872@47.27.1553.872" timestamp="1585561218024" />
-    <state x="340" y="84" width="770" height="781" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588407985864">
-      <screen x="59" y="27" width="1541" height="872" />
-    </state>
-    <state x="340" y="84" width="770" height="781" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/59.27.1541.872@59.27.1541.872" timestamp="1588407985864" />
-    <state x="678" y="391" width="467" height="218" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1587718264063">
-      <screen x="59" y="27" width="1541" height="872" />
-    </state>
-    <state x="678" y="391" width="467" height="218" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/59.27.1541.872@59.27.1541.872" timestamp="1587718264063" />
-    <state x="282" y="199" width="890" height="542" key="find.popup" timestamp="1591038839922">
-      <screen x="59" y="27" width="1541" height="872" />
-    </state>
-    <state x="282" y="199" width="890" height="542" key="find.popup/59.27.1541.872@59.27.1541.872" timestamp="1591038839922" />
-    <state x="664" y="230" width="327" height="463" key="refactoring.ChangeSignatureDialog" timestamp="1587738885952">
-      <screen x="59" y="27" width="1541" height="872" />
-    </state>
-    <state x="664" y="230" width="327" height="463" key="refactoring.ChangeSignatureDialog/59.27.1541.872@59.27.1541.872" timestamp="1587738885952" />
-    <state x="492" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1588405172960">
-      <screen x="59" y="27" width="1541" height="872" />
-    </state>
-    <state x="492" y="206" width="672" height="678" key="search.everywhere.popup/59.27.1541.872@59.27.1541.872" timestamp="1588405172960" />
-    <state x="557" y="289" width="540" height="345" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587790456905">
-      <screen x="59" y="27" width="1541" height="872" />
-    </state>
-    <state x="557" y="289" width="540" height="345" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/59.27.1541.872@59.27.1541.872" timestamp="1587790456905" />
+    <state x="321" y="93" width="1016" height="738" key="SettingsEditor/59.27.1541.872@59.27.1541.872" timestamp="1599977416312" />
   </component>
 </project>
