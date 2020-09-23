@@ -2,10 +2,13 @@ from django.db import models
 from django_extensions.db.fields import AutoSlugField
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
-from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel, MultiFieldPanel, InlinePanel
-from wagtail.core.fields import RichTextField
-from wagtail.core.models import Orderable
+from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel, MultiFieldPanel, InlinePanel, StreamFieldPanel
+from wagtail.core.fields import RichTextField, StreamField
+from wagtail.core.models import Orderable, Page
 from wagtail.snippets.models import register_snippet
+
+from aqui_carattino.base.blocks import RelatedItemsBlock
+from aqui_carattino.blog.models import ArticlePage
 
 
 class MenuItem(Orderable):
@@ -101,3 +104,17 @@ class FooterText(models.Model):
 
     def __str__(self):
         return "Footer Text"
+
+
+class HomePage(Page):
+    keywords = models.CharField(max_length=255, help_text='Small text above title')
+    body = RichTextField()
+    section_title = models.CharField(max_length=50, help_text='Title to describe the collection of links')
+    important_articles = StreamField([('important_articles', RelatedItemsBlock())], blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('keywords'),
+        FieldPanel('body'),
+        FieldPanel('section_title'),
+        StreamFieldPanel('important_articles'),
+    ]
