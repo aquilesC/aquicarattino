@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1ac376-6967-4389-9037-e114fe2ef450" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/aquicarattino.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aquicarattino.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,19 +51,22 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="Python Script" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../static_builder" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
       <scroll-view-position x="0" y="0" />
     </layout>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="Unnamed" pattern="file[static_builder]:static/style.css" />
   </component>
   <component name="ProjectId" id="1OYWpxTDZ5wrfZnyGtfQhISWEXp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -76,12 +82,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../klimaat_helpdesk" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="sshConsole" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -205,7 +212,22 @@
       <workItem from="1596129536941" duration="1319000" />
       <workItem from="1599977378439" duration="1316000" />
       <workItem from="1599979654725" duration="1588000" />
-      <workItem from="1599983473368" duration="451000" />
+      <workItem from="1599983473368" duration="1208000" />
+      <workItem from="1600374074698" duration="26000" />
+      <workItem from="1600461096137" duration="3680000" />
+      <workItem from="1600496491811" duration="691000" />
+      <workItem from="1600712145637" duration="19000" />
+      <workItem from="1600801571268" duration="3658000" />
+      <workItem from="1600965311186" duration="8805000" />
+      <workItem from="1601005106749" duration="5213000" />
+      <workItem from="1601131698239" duration="120000" />
+      <workItem from="1601310284397" duration="6706000" />
+      <workItem from="1601354369787" duration="1187000" />
+      <workItem from="1601406607327" duration="4647000" />
+      <workItem from="1601555788598" duration="3978000" />
+      <workItem from="1601614530800" duration="5247000" />
+      <workItem from="1601621228999" duration="218000" />
+      <workItem from="1601703545046" duration="10996000" />
     </task>
     <servers />
   </component>
@@ -225,13 +247,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="615" y="19" width="424" height="492" key="FileChooserDialogImpl" timestamp="1599979680732">
+    <state x="466" y="199" width="722" height="453" key="EditFileWatcherDialog" timestamp="1600969104347">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="615" y="19" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1599979680732" />
-    <state x="321" y="93" width="1016" height="738" key="SettingsEditor" timestamp="1599977416312">
+    <state x="466" y="199" width="722" height="453" key="EditFileWatcherDialog/59.27.1541.872@59.27.1541.872" timestamp="1600969104347" />
+    <state x="615" y="19" width="424" height="492" key="FileChooserDialogImpl" timestamp="1601732859565">
       <screen x="59" y="27" width="1541" height="872" />
     </state>
-    <state x="321" y="93" width="1016" height="738" key="SettingsEditor/59.27.1541.872@59.27.1541.872" timestamp="1599977416312" />
+    <state x="615" y="19" width="424" height="492" key="FileChooserDialogImpl/59.27.1541.872@59.27.1541.872" timestamp="1601732859565" />
+    <state x="321" y="53" width="1016" height="738" key="SettingsEditor" timestamp="1601411414206">
+      <screen x="59" y="27" width="1541" height="872" />
+    </state>
+    <state x="321" y="53" width="1016" height="738" key="SettingsEditor/59.27.1541.872@59.27.1541.872" timestamp="1601411414206" />
+    <state x="518" y="185" width="656" height="580" key="find.popup" timestamp="1601718265404">
+      <screen x="59" y="27" width="1541" height="872" />
+    </state>
+    <state x="518" y="185" width="656" height="580" key="find.popup/59.27.1541.872@59.27.1541.872" timestamp="1601718265404" />
+    <state x="625" y="287" width="513" height="408" key="scopes" timestamp="1600969102025">
+      <screen x="59" y="27" width="1541" height="872" />
+    </state>
+    <state x="625" y="287" width="513" height="408" key="scopes/59.27.1541.872@59.27.1541.872" timestamp="1600969102025" />
   </component>
 </project>
