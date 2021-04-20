@@ -16,7 +16,7 @@ django-extensions==2.2.9
 
 # Wagtail
 # ------------------------------------------------------------------------------
-wagtail==2.10.1
+wagtail==2.11.6
 wagtailfontawesome==1.2.1
 
 # Newsletter
