@@ -159,13 +159,14 @@ LOGGING = {
         }
     },
     "handlers": {
-        "console": {
-            "level": "DEBUG",
-            "class": "logging.StreamHandler",
+        "file": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            'filename': '/webapps/aquicarattino/logs/django_info.log',
             "formatter": "verbose",
         }
     },
-    "root": {"level": "INFO", "handlers": ["console"]},
+    "root": {"level": "INFO", "handlers": ["file"]},
     "loggers": {
         "django.db.backends": {
             "level": "ERROR",
@@ -173,10 +174,10 @@ LOGGING = {
             "propagate": False,
         },
         # Errors logged by the SDK itself
-        "sentry_sdk": {"level": "ERROR", "handlers": ["console"], "propagate": False},
+        "sentry_sdk": {"level": "ERROR", "handlers": ["file"], "propagate": False},
         "django.security.DisallowedHost": {
             "level": "ERROR",
-            "handlers": ["console"],
+            "handlers": ["file"],
             "propagate": False,
         },
     },
